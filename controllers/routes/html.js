@@ -17,7 +17,10 @@ module.exports = function (app) {
         } res.render(path.join(__dirname, "../../views/signup.handlebars"));
     });
     app.get("/members", isAuthenticated, function (req, res) {
-        res.render(path.join(__dirname, "../../views/signup.handlebars"));
+
+
+        res.render(path.join(__dirname, "../../views/login.handlebars"));
+
     });
 };
 

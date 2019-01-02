@@ -1,6 +1,9 @@
 $(document).ready(function () {
     // Getting references to our form and input
+
     var signUp = $("#submit-signup");
+
+
     var emailInput = $("#email-input");
     var passwordInput = $("#password-input");
 
@@ -35,6 +38,6 @@ $(document).ready(function () {
 
     function handleLoginErr(err) {
         $("#alert .msg").text(err.responseJSON);
-        $("#alert").fadeIn(500);
+        $("#alert").fadeIn(600);
     }
 });
