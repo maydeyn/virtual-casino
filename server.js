@@ -31,14 +31,14 @@ connection.connect(function (err) {
 });
 const app = express();
 // var db = connection;
-const apiroutes = require("./controllers/routers/apirouter");
-const html = require("./controllers/routers/html");
+const apiroutes = require("./controllers/routes/apirouter")(app);
+const html = require("./controllers/routes/html")(app);
 
 
 
 //engine for handlebars
 app.set("views", path.join(__dirname, "views"));
-app.engine("handlebars", exphbs({ defaultLayout: "layout" }));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // // bodyparser middleware
@@ -57,6 +57,11 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
+// app.get("/", function (req, res) {
+//   if (req.user) {
+//     res.redirect("/signup");
+//   } res.render(path.join(__dirname, "views/signup.handlebars"));
+// });
 app.use(passport.initialize());
 app.use(passport.session());
 db.sequelize.sync().then(function () {
