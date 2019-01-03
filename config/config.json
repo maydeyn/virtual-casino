@@ -1,10 +1,10 @@
 {
   "development": {
     "port": "3306",
-    "username": "kdibcgfp6g03hd70",
-    "password": "ixh48h6kpyg9y0pc",
-    "database": "mgv9vdhnivk7894t",
-    "host": "izm96dhhnwr2ieg0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "xhglewa64mkviydd",
+    "password": "hilkx4zdmgg37e66",
+    "database": "hfexcg5o4oju4wut",
+    "host": "e764qqay0xlsc4cz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
