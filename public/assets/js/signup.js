@@ -1,5 +1,6 @@
 $(document).ready(function () {
     // Getting references to our form and input
+<<<<<<< HEAD
     const signUp = $("form#submit-signup");
     const emailInput = $("input#email-input");
     const passwordInput = $("input#password-input");
@@ -8,6 +9,14 @@ $(document).ready(function () {
     const lastNameInput = $("#last-name");
     const cityInput = $("#city");
     const stateInput = $("#state");
+=======
+
+    var signUp = $("#submit-signup");
+
+
+    var emailInput = $("#email-input");
+    var passwordInput = $("#password-input");
+>>>>>>> 0c91f466444176547b40afdd8502eeb1112fb4db
 
     // When the signup button is clicked, we validate the user information are not blank
     signUp.on("submit", function (event) {
@@ -56,6 +65,6 @@ $(document).ready(function () {
 
     function handleLoginErr(err) {
         $("#alert .msg").text(err.responseJSON);
-        $("#alert").fadeIn(500);
+        $("#alert").fadeIn(600);
     }
 });

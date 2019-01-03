@@ -13,6 +13,7 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
+<<<<<<< HEAD
 
         first_name: {
             type: DataTypes.STRING,
@@ -34,6 +35,19 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         }
+=======
+        // name: {
+        //     first: DataTypes.STRING,
+        //     allowNull: false,
+        //     last: DataTypes.STRING
+
+        // },
+        // adress: {
+        //     city: DataTypes.STRING,
+        //     state: DataTypes.STRING,
+        //     zip: DataTypes.INTEGER
+        // }
+>>>>>>> 0c91f466444176547b40afdd8502eeb1112fb4db
     });
 
     User.prototype.validPassword = function (password) {
