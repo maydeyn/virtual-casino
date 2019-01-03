@@ -13,13 +13,13 @@ const mysql = require("mysql");
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
 // MySQL DB Connection Information (remember to change this with our specific credentials)
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: 8889,
-  user: "root",
-  password: "root",
-  database: "login_system"
-});
+// var connection = mysql.createConnection({
+//   host: "localhost",
+//   port: 8889,
+//   user: "root",
+//   password: "root",
+//   database: "login_system"
+// });
 
 // // Initiate MySQL Connection.
 connection.connect(function(err) {
