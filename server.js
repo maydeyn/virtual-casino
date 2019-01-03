@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 // const cookieParser = require("cookie - parser");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 // const expressValidator = require("express-validator");
@@ -9,30 +9,29 @@ const exphbs = require("express-handlebars");
 
 const passport = require("./config/passport");
 // const LocalStrategy = require("passport-local").Strategy;
-const mysql = require("mysql");
+// const mysql = require("mysql");
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
 // MySQL DB Connection Information (remember to change this with our specific credentials)
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: 8889,
-  user: "root",
-  password: "root",
-  database: "login_system"
-});
+// var connection = mysql.createConnection({
+//   host: "localhost",
+//   port: 8889,
+//   user: "root",
+//   password: "root",
+//   database: "login_system"
+// });
 
 // // Initiate MySQL Connection.
-connection.connect(function (err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
-});
+// connection.connect(function (err) {
+//   if (err) {
+//     console.error("error connecting: " + err.stack);
+//     return;
+//   }
+//   console.log("connected as id " + connection.threadId);
+// });
 const app = express();
 // var db = connection;
-const apiroutes = require("./controllers/routes/apirouter")(app);
-const html = require("./controllers/routes/html")(app);
+
 
 
 
@@ -43,8 +42,9 @@ app.set("view engine", "handlebars");
 
 // // bodyparser middleware
 // app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 // app.use(cors());
 
 // app.use(cookieParser());
@@ -64,7 +64,10 @@ app.use(session({
 // });
 app.use(passport.initialize());
 app.use(passport.session());
-db.sequelize.sync().then(function () {
+require("./routes/html")(app);
+require("./routes/apirouter")(app);
+// require("./controllers/routes/html")(app);
+db.sequelize.sync({ force: false }).then(function () {
   app.listen(PORT, function () {
     console.log("==> 🌎 Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
   });
