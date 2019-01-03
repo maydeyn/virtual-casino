@@ -22,7 +22,7 @@ var connection = mysql.createConnection({
 });
 
 // // Initiate MySQL Connection.
-connection.connect(function (err) {
+connection.connect(function(err) {
   if (err) {
     console.error("error connecting: " + err.stack);
     return;
@@ -33,8 +33,6 @@ const app = express();
 // var db = connection;
 const apiroutes = require("./controllers/routes/apirouter")(app);
 const html = require("./controllers/routes/html")(app);
-
-
 
 //engine for handlebars
 app.set("views", path.join(__dirname, "views"));
@@ -52,11 +50,13 @@ app.use(bodyParser.json());
 //public or static folders
 
 app.use(express.static(path.join(__dirname, "public")));
-app.use(session({
-  secret: "secret",
-  resave: true,
-  saveUninitialized: true
-}));
+app.use(
+  session({
+    secret: "secret",
+    resave: true,
+    saveUninitialized: true
+  })
+);
 // app.get("/", function (req, res) {
 //   if (req.user) {
 //     res.redirect("/signup");
@@ -64,11 +64,12 @@ app.use(session({
 // });
 app.use(passport.initialize());
 app.use(passport.session());
-db.sequelize.sync().then(function () {
-  app.listen(PORT, function () {
-    console.log("==> 🌎 Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log(
+      "==> 🌎 Listening on port %s. Visit http://localhost:%s/ in your browser.",
+      this.address().PORT,
+      app.settings.env
+    );
   });
 });
-
-
-
