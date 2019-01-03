@@ -10,7 +10,7 @@ const exphbs = require("express-handlebars");
 const passport = require("./config/passport");
 // const LocalStrategy = require("passport-local").Strategy;
 // const mysql = require("mysql");
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || PORT;
 var db = require("./models");
 // MySQL DB Connection Information (remember to change this with our specific credentials)
 // var connection = mysql.createConnection({
