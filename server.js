@@ -9,7 +9,7 @@ const exphbs = require("express-handlebars");
 
 const passport = require("./config/passport");
 // const LocalStrategy = require("passport-local").Strategy;
-const mysql = require("mysql");
+// const mysql = require("mysql");
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
 // MySQL DB Connection Information (remember to change this with our specific credentials)
@@ -22,13 +22,13 @@ var db = require("./models");
 // });
 
 // // Initiate MySQL Connection.
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
-});
+// connection.connect(function(err) {
+//   if (err) {
+//     console.error("error connecting: " + err.stack);
+//     return;
+//   }
+//   console.log("connected as id " + connection.threadId);
+// });
 const app = express();
 // var db = connection;
 const apiroutes = require("./controllers/routes/apirouter")(app);
