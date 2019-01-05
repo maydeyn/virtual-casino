@@ -1,8 +1,7 @@
 // Requiring necessary npm packages
 var express = require("express");
 var session = require("express-session");
-// Requiring passport as we've configured it
-var passport = require("./config/passport");
+
 
 
 // const mysql = require("mysql");
@@ -16,8 +15,9 @@ var passport = require("./config/passport");
 //   password: "root",
 //   database: "login_system"
 // });
+// Requiring passport as we've configured it
 
- const passport = require("./config/passport");
+const passport = require("./config/passport");
 
 const LocalStrategy = require("passport-local").Strategy;
 // const mysql = require("mysql");
