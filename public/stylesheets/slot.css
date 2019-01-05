@@ -1,6 +1,11 @@
 body {
   background-color: rgb(102, 2, 2);
 }
+/* #point-icon{
+  width: 100px;
+  height: 50px;
+  background: rgb(83, 12, 163);
+} */
 .slots {
   position: absolute;
   top: 0;
