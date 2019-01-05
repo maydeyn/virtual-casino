@@ -1,0 +1,235 @@
+/******** ********/
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  height: 100%;
+  font-family: "VT323", sans-serif;
+}
+
+/********** NES BUTTONS STYLING **********/
+.new-game,
+.continue {
+  z-index: 2;
+  position: absolute;
+  top: 6%;
+  left: 10%;
+}
+
+/********** PARALLAX BACKGROUND **********/
+/********** Dan Stuart @ https://codepen.io/danbhala/pen/GJGQad **********/
+.parallax {
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax__layer--deep {
+  -webkit-transform: translateZ(-2px) scale(3);
+  transform: translateZ(-2px) scale(3);
+}
+
+.parallax__layer {
+  pointer-events: none;
+}
+
+/********** PARALLAX LAYERS **********/
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#0e422b), to(#08a561));
+  background: linear-gradient(#0e422b 0%, #08a561 100%);
+}
+.background {
+  position: absolute;
+  display: block;
+}
+
+.parallax__layer--door {
+  padding: 0 100vw;
+}
+.parallax__layer--door,
+.background {
+  top: 0;
+  right: 0;
+  bottom: 0px;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 50wh;
+  background-image: url(../assets/images/reddoor.png);
+  z-index: 2000;
+}
+
+.parallax__layer--title {
+  padding: 0 300vw;
+}
+.parallax__layer--title .background {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: 300vh;
+  background-image: url(../assets/images/title.png);
+  opacity: 0.7;
+  z-index: -100;
+}
+
+.parallax__layer--deep {
+  padding: 0 250vw;
+}
+.parallax__layer--deep .background {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: 120vh;
+  background-image: url(../assets/images/bar.png);
+  opacity: 0.7;
+}
+.parallax__layer--back {
+  padding: 0 250vw;
+}
+.parallax__layer--back .background {
+  opacity: 0.3;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: 150vh;
+  background-image: url(../assets/images/red.png);
+  z-index: 3000;
+}
+
+.parallax__layer--base {
+  padding: 0 300vw;
+}
+.parallax__layer--base .background {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: 200vh;
+  background-image: url(../assets/images/light.png);
+  opacity: 0.5;
+  z-index: 4000;
+}
+
+/********** PARALLAX LAYERS ANIMATIONS **********/
+@-webkit-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.flicker-base {
+  -webkit-animation: flickerAnimation 1.5s infinite;
+  animation: flickerAnimation 1.5s infinite;
+}
+
+.flicker-back {
+  -webkit-animation: flickerAnimation 0.5s infinite;
+  animation: flickerAnimation 0.5s infinite;
+}
+
+/********** CHARACTER **********/
+#player {
+  position: absolute;
+  bottom: 30px;
+  left: 100px;
+  background: url(../assets/images/character/idle0.png) no-repeat;
+  width: 200px;
+  height: 200px;
+  z-index: 1000;
+}
+
+#map {
+  border: 1px solid black;
+  position: relative;
+  height: 300px;
+  width: 1000px;
+}
+
+/* ********* MOBBILE RESPONSIVE **********/
+#mobile-responsive {
+  height: 100%;
+}
+
+#mobile-responsive-warning {
+  display: none;
+}
+@media only screen and (orientation: portrait) {
+  #mobile-responsive {
+    display: none;
+  }
+  #mobile-responsive-warning {
+    display: block;
+  }
+}
+@media only screen and (orientation: landscape) {
+  #mobile-responsive-warning {
+    display: none;
+  }
+}
+.nes-smartphone {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.nes-balloon {
+  width: auto;
+}
+#mobile-responsive-warning {
+  padding-top: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  font-size: 14px;
+  text-align: center;
+  color: black;
+}
