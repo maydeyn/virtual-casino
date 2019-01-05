@@ -1,5 +1,29 @@
+// ideal roulette logic
+
+
+// function to take wagers from the player and push the to a json. 
+// include a sub-function to check that the player has the money to commit the bet
+
+// function to essentially say 'no more bets. the sequence of that umbrella function are as follows:
+// • the player bank is debited
+// • the casino runs a random number for the croupier
+// • compare the croupier number against the wagers on the TableNumbers
+// • pay any winning wagers
+// • empty the json that holds the wagers
+
+
+
+
+
+
+
+
+// -------------- below this line is the original prototype --------------
+// ------------ the original prototype is no longer the ideal logic ------
+// ---------------- the ideal logic is above this interlude --------------
+
 const targetNumber = "";
-const activeBets = "";
+const activeBets = {};
 const playerMoney = "";
 
 // for testing purposes

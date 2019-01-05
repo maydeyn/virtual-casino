@@ -1,7 +1,5 @@
 // table of contents: first section is the table numbers and their traits. second section is bet characteristics [ctrl-f/command-f "#bet-definition-tbl"]. third section is victor conditions and if-else statements [ctrl-f/command-f "#win-condition-tbl"]
 
-
-
 // this constructor templates the table numbers
 
 function TableNumbers (value, red, even, zero){
@@ -52,6 +50,7 @@ const num35 = new TableNumbers(35, false, false, false);
 const num36 = new TableNumbers(36, true, true, false);
 const numDoubleAught = new TableNumbers(37, false, false, true)
 
+// testing for Constructor function
 // console logs to test the tablenumbers
 // var croup = num18;
 
@@ -147,36 +146,13 @@ var corners = [
 ]
 
 
-// testing logic below this line and ALL can be deleted before final push
+// testing the ability to call characteristics from objects
 
 // console.log(splits.vertical.colB[5])
 // console.log(splits.horizontal.lowStreets[3])
 // console.log(corners[1]);
 
 
-// var targetNumber = {
-//     value: 5,
-//     isRed: true,
-//     isEven: false,
-//     isZero: false
-// }
-
-// var croupier = targetNumber;
-
-// console.log(doubleStreets.double1);
-
-if (doubleStreets.double1.indexOf(croupier.value) > -1){
-    console.log("win 5:1");
-} else {
-    console.log("lose");
-} 
-
-if (croupier.isRed == true && croupier.isZero == false) {
-    console.log("win 1:1");
-    // function to pay out winnings to player bank goes here
-    } else {
-        console.log("lose");
-    }
 
 
 // the collection of conditions that define a victory "#win-condition-tbl"
@@ -366,3 +342,31 @@ if (doubleStreets.double1.indexOf(croupier.value) > -1){
 } else {
     console.log("lose");
 } 
+
+
+
+// everything below this line is function tests
+
+// var targetNumber = {
+//     value: 5,
+//     isRed: true,
+//     isEven: false,
+//     isZero: false
+// }
+
+// var croupier = targetNumber;
+
+// console.log(doubleStreets.double1);
+
+if (doubleStreets.double1.indexOf(croupier.value) > -1){
+    console.log("win 5:1");
+} else {
+    console.log("lose");
+} 
+
+if (croupier.isRed == true && croupier.isZero == false) {
+    console.log("win 1:1");
+    // function to pay out winnings to player bank goes here
+    } else {
+        console.log("lose");
+    }
