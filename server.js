@@ -4,8 +4,7 @@ var session = require("express-session");
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
 
-const passport = require("./config/passport");
-// const LocalStrategy = require("passport-local").Strategy;
+
 // const mysql = require("mysql");
 // var PORT = process.env.PORT || 3008;
 // var db = require("./models");
@@ -18,7 +17,13 @@ const passport = require("./config/passport");
 //   database: "login_system"
 // });
 
-// const passport = require("./config/passport");
+ const passport = require("./config/passport");
+
+const LocalStrategy = require("passport-local").Strategy;
+// const mysql = require("mysql");
+// var PORT = process.env.PORT || PORT;
+// var db = require("./models");
+
 // // const LocalStrategy = require("passport-local").Strategy;
 // // const mysql = require("mysql");
 // var PORT = process.env.PORT || PORT;
@@ -40,15 +45,13 @@ const passport = require("./config/passport");
 // //   }
 // //   console.log("connected as id " + connection.threadId);
 // // });
+
 // const app = express();
 // // var db = connection;
 // const apiroutes = require("./controllers/routes/apirouter")(app);
 // const html = require("./controllers/routes/html")(app);
 
-// //engine for handlebars
-// app.set("views", path.join(__dirname, "views"));
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
+
 
 // // // bodyparser middleware
 // // app.use(bodyParser.urlencoded({ extended: false }));
@@ -68,11 +71,8 @@ const passport = require("./config/passport");
 //     saveUninitialized: true
 //   })
 // );
-// // app.get("/", function (req, res) {
-// //   if (req.user) {
-// //     res.redirect("/signup");
-// //   } res.render(path.join(__dirname, "views/signup.handlebars"));
-// // });
+
+
 // app.use(passport.initialize());
 // app.use(passport.session());
 // db.sequelize.sync().then(function() {
@@ -81,6 +81,7 @@ const passport = require("./config/passport");
 //       "==> 🌎 Listening on port %s. Visit http://localhost:%s/ in your browser." +
 //         PORT
 //     );
+
 
 // Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8080;
@@ -92,7 +93,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 // We need to use sessions to keep track of our user's login status
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(session({ secret: "virtual casino", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 
