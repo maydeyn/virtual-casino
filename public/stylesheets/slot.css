@@ -1,13 +1,19 @@
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0e422b), to(#08a561));
-  background: gradient(#0e422b 0%, #08a561 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#0e422b), to(#063f26));
+  background: gradient(#0e422b 0%, #063f26 100%);
 }
-
-body,
+/*wondering about this part ??????*/
+/* body,
 html {
   height: 100%;
-}
+} */
 
+
+#money-holder {
+  width: 100px;
+  height: 80px;
+  background: rgb(128, 0, 0);
+}
 .slots {
   position: absolute;
   top: 0;
@@ -22,37 +28,45 @@ html {
 .item {
   width: 400px;
   height: 400px;
-  -webkit-transform-style: preserve-3d;
+ 
   transform-style: preserve-3d;
-  -webkit-transform-origin: 50px 50px -122px;
+  -webkit-transform-style: preserve-3d;
+  
   transform-origin: 50px 50px -122px;
+  -webkit-transform-origin: 50px 50px -122px;
   position: relative;
   top: 0px;
   left: 0px;
 }
 .item.animate {
-  -webkit-animation-name: rotateAnim;
+ 
   animation-name: rotateAnim;
-  -webkit-animation-duration: 6s;
+  -webkit-animation-name: rotateAnim;
   animation-duration: 6s;
-  -webkit-animation-timing-function: cubic-bezier(0.525, 0.915, 0.405, 1);
-  animation-timing-function: cubic-bezier(0.525, 0.915, 0.405, 1);
+  -webkit-animation-duration: 6s;
+ animation-timing-function: cubic-bezier(0.525, 0.915, 0.405, 1);
+ -webkit-animation-timing-function: cubic-bezier(0.525, 0.915, 0.405, 1);
+  
 }
 .item.state1 {
-  -webkit-transform: rotateX(0deg);
   transform: rotateX(0deg);
-  -webkit-transition: -webkit-transform 1s;
+  -webkit-transform: rotateX(0deg);
+  
   transition: -webkit-transform 1s;
+  /* -webkit-transition: -webkit-transform 1s; */
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
-  -webkit-transition-delay: 2s;
+ 
   transition-delay: 2s;
+  -webkit-transition-delay: 2s;
 }
 .item.state2 {
-  -webkit-transform: rotateX(45deg);
+
   transform: rotateX(45deg);
-  -webkit-transition: -webkit-transform 1s;
+  -webkit-transform: rotateX(45deg);
+
   transition: -webkit-transform 1s;
+  /* -webkit-transition: -webkit-transform 1s; */
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
   -webkit-transition-delay: 2s;
@@ -138,7 +152,7 @@ html {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: #fff;
+  background-color: rgb(71, 4, 4);
   -webkit-box-shadow: inset 0px 1px 5px rgb(170, 5, 5),
     inset 0px -1px 5px rgb(97, 7, 7);
   box-shadow: inset 0px 1px 5px rgb(170, 5, 5), inset 0px -1px 5px rgb(97, 7, 7);
@@ -192,14 +206,14 @@ html {
   background-image: url(../assets/images/slots/7.png);
 }
 .item div:nth-child(9) {
-  background: #fff;
+  background:rgb(97, 7, 7);
   top: -72px;
   height: 242px;
   -webkit-transform: rotateY(0deg) translate3d(0px, 0px, -122px);
   transform: rotateY(0deg) translate3d(0px, 0px, -122px);
 }
 .item div:nth-child(10) {
-  background: #fff;
+  background:rgb(97, 7, 7);
   top: 172px;
   height: 242px;
   -webkit-transform: rotateX(-90deg) translate3d(0px, 122px, -244px);
@@ -226,6 +240,7 @@ html {
   }
 }
 .btn_container {
+  
   position: relative;
   top: 80px;
   left: 80px;
@@ -234,15 +249,62 @@ html {
 .nes-btn {
   font-size: 25px;
 }
-
-
+.spin_btn.active {
+  transform: translate3d(0px, 0px, 5px);
+}
+.spin_btn.active .side:nth-child(5) {
+  background-color: rgba(255, 0, 0, .7);
+  transform: translate3d(0px, 0px, -1px);
+}
+.spin_btn .side {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background-color: rgba(255, 255, 255, .5);
+  transform-style: preserve-3d;
+  transform-origin: center;
+}
+.spin_btn .side:first-child {
+  top: 0px;
+  left: 0px;
+  transform: rotateX(90deg) translate3d(0px, -10px, 10px);
+}
+.spin_btn .side:nth-child(2) {
+  bottom: 0px;
+  left: 0px;
+  transform: rotateX(90deg) translate3d(0px, -10px, -10px);
+}
+.spin_btn .side:nth-child(3) {
+  width: 20px;
+  height: 100%;
+  bottom: 0px;
+  left: 0;
+  transform: rotateY(90deg) translate3d(10px, 0px, -10px);
+}
+.spin_btn .side:nth-child(4) {
+  width: 20px;
+  height: 100%;
+  bottom: 0px;
+  right: 0px;
+  transform: rotateY(90deg) translate3d(10px, 0px, 10px);
+}
+.spin_btn .side:nth-child(5) {
+  width: 100%;
+  height: 100%;
+  line-height: 80px;
+  top: 0px;
+  left: 0px;
+  transform: translate3d(0px, 0, -20px);
+  background-color: rgba(0, 255, 0, .7);
+  transition: transform 0.5s;
+}
   .salute {
     display: none;
-    background-image: url(../images/ananas_image.jpg);
+    background-image: url(../assets/images/slots/cherry.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
     position: absolute;
     top: 0;
     left: 0;
@@ -252,14 +314,14 @@ html {
     display: block;
   }
   .salute.two {
-    background-image: url(../images/dollar_image.jpeg);
+    background-image: url(../assets/images/slots/apple.png);
     left: auto;
     right: 0;
   }
   .salute.three {
-    background-image: url(../images/strawberry_image..jpg);
+    background-image: url(../assets/images/slots/dragonfruit.png);
     top: auto;
     left: 0;
     bottom: 0;
   }
-}
+
