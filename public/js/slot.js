@@ -2,6 +2,8 @@ $(document).ready(function () {
     var isAnimate = false;
     var randomNum;
     var winNums = [];
+    var money = 30;
+    var counter = $("#counter").text(money);
     var slots = $(".slots .item");
     var salute = $(".salute");
     $("#btn-spin").on("click", function () {
@@ -23,8 +25,35 @@ $(document).ready(function () {
                 $("#btn-spin").removeClass("active");
                 if (winNums[0] == winNums[1] && winNums[0] == winNums[2]) {
                     salute.addClass("active");
+                    money += 10;
+                    counter = $("#counter").text(money);
+                } else {
+                    money -= 10;
+                    counter = $("#counter").text(money);
+
                 }
+
             }, 8000);
+
         }
+        if (money === 10) {
+            isAnimate = false;
+            $(".extramoney").show();
+            $("#100").on("click", function () {
+                money += 100;
+
+            });
+            $("#50").on("click", function () {
+                money += 50;
+                counter = $("#counter").text(money);
+            });
+            $("#150").on("click", function () {
+                money += 150;
+
+            });
+        } else {
+            $(".extramoney").hide();
+        };
     });
+
 });
