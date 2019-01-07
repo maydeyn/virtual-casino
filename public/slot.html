@@ -23,8 +23,17 @@
   </head>
 
   <body>
+      <div class="sounds">
+          <button class="nes-btn is-success" id="play">Sound On 
+            <audio id="sound">
+              <source id="playsound" src="./audio/Podington_Bear_-_Slotcar.mp3" type="audio.mpeg">
+            </audio>
+          </button>
+          <button class="nes-btn is-warning" id="pause">Sound Off</button>
+        </div>
       <div id="player"></div>
     <div class="parallax">
+
         <div class="btn_container">
             <button type="button" class="nes-btn is-success" id="btn-spin">
               REEL
@@ -33,6 +42,10 @@
               <div class="side"></div>
               <div class="side"></div>
               <div class="side"></div>
+              <audio id="reelsound">
+                  <source src="./audio/448842__joannaluna__slot-machine-01.wav" type="audio/mpeg">
+                </audio>
+              </button>
             </button>
 
             <audio id="sound">

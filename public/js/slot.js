@@ -2,12 +2,12 @@ $(document).ready(function () {
     var isAnimate = false;
     var randomNum;
     var winNums = [];
-    var money = 30;
+    var money = 20;
     var counter = $("#counter").text(money);
     var slots = $(".slots .item");
     var salute = $(".salute");
     var sound = $("#sound");
-    var playsound = $("sound");
+    var reelsound = $("reelsound");
     $("#btn-spin").on("click", function () {
         if (!isAnimate) {
             isAnimate = true;
@@ -57,8 +57,8 @@ $(document).ready(function () {
         } else {
             $(".extramoney").hide();
         };
-        playAudio();
-        pauseAudio();
+        // playAudio();
+        // pauseAudio();
     });
     $("#play").on("click", function () {
         soundOn();
@@ -67,16 +67,21 @@ $(document).ready(function () {
         soundOff();
     });
 
-    function playAudio() {
-        isAnimate = true;
-        // playsound.src = "../audio/04515.mp3";
-        // playsound.play();
-        // alert("the song is playing");
-    }
-    function pauseAudio() {
-        isAnimate = false;
-        // sound.pause();
-    }
+    // function playAudio() {
+    //     isAnimate = true;
+    //     document.getElementById("reelsound").play(reelsound);
+
+    //     // playsound.src = "../audio/04515.mp3";
+    //     // playsound.play();
+    //     setInterval(playAudio, 1000);   // alert("the song is playing");
+    // }
+
+
+    // function pauseAudio() {
+    //     isAnimate = false;
+    //     document.getElementById("reelsound").pause(reelsound);
+    //     // sound.pause();
+    // }
 });
 function soundOn() {
     document.getElementById("sound").play();
