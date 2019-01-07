@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./stylesheets/roulette.css">
+    <title>Roulette</title>
+</head>
+<body>
+    
+    <!-- div to hold player bank -->
+    <div id="bank">$100</div>
+
+    <!-- div to hold the target number up at the top, AFTER the player has made bets and committed to them -->
+    <div id="croupier-number">croupier target number will go here</div>
+    <form id="test">
+    <!-- div to hold menus for the player to define their bet -->
+    <div id="roulette-top-menu"></div>
+    <!-- first show a menu for 'inside bet/outside bet/go back' -->
+    
+    <button type="button" class="accordion" input type=>Inside Bets</button>
+    <div class="panel">
+        <button type="button" class="accordion">straight bet</button>
+        <div class="panel">
+            <input type="radio" name="straight-wager" value="straight 0"> 0<br>
+            <input type="radio" name="straight-wager" value="straight 00"> 00<br>
+            <input type="radio" name="straight-wager" value="straight 1"> 1<br>
+            <input type="radio" name="straight-wager" value="straight 2"> 2<br>
+            <input type="radio" name="straight-wager" value="straight 3"> 3<br>
+            <input type="radio" name="straight-wager" value="straight 4"> 4<br>
+            <input type="radio" name="straight-wager" value="straight 5"> 5<br>
+            <input type="radio" name="straight-wager" value="straight 6"> 6<br>
+            <input type="radio" name="straight-wager" value="straight 7"> 7<br>
+            <input type="radio" name="straight-wager" value="straight 8"> 8<br>
+            <input type="radio" name="straight-wager" value="straight 9"> 9<br>
+            <input type="radio" name="straight-wager" value="straight 10"> 10<br>
+            <input type="radio" name="straight-wager" value="straight 11"> 11<br>
+            <input type="radio" name="straight-wager" value="straight 12"> 12<br>
+            <input type="radio" name="straight-wager" value="straight 13"> 13<br>
+            <input type="radio" name="straight-wager" value="straight 14"> 14<br>
+            <input type="radio" name="straight-wager" value="straight 15"> 15<br>
+            <input type="radio" name="straight-wager" value="straight 16"> 16<br>
+            <input type="radio" name="straight-wager" value="straight 17"> 17<br>
+            <input type="radio" name="straight-wager" value="straight 18"> 18<br>
+            <input type="radio" name="straight-wager" value="straight 19"> 19<br>
+            <input type="radio" name="straight-wager" value="straight 20"> 20<br>
+            <input type="radio" name="straight-wager" value="straight 21"> 21<br>
+            <input type="radio" name="straight-wager" value="straight 22"> 22<br>
+            <input type="radio" name="straight-wager" value="straight 23"> 23<br>
+            <input type="radio" name="straight-wager" value="straight 24"> 24<br>
+            <input type="radio" name="straight-wager" value="straight 25"> 25<br>
+            <input type="radio" name="straight-wager" value="straight 26"> 26<br>
+            <input type="radio" name="straight-wager" value="straight 27"> 27<br>
+            <input type="radio" name="straight-wager" value="straight 28"> 28<br>
+            <input type="radio" name="straight-wager" value="straight 29"> 29<br>
+            <input type="radio" name="straight-wager" value="straight 30"> 30<br>
+            <input type="radio" name="straight-wager" value="straight 31"> 31<br>
+            <input type="radio" name="straight-wager" value="straight 32"> 32<br>
+            <input type="radio" name="straight-wager" value="straight 33"> 33<br>
+            <input type="radio" name="straight-wager" value="straight 34"> 34<br>
+            <input type="radio" name="straight-wager" value="straight 35"> 35<br>
+            <input type="radio" name="straight-wager" value="straight 36"> 36<br>
+        </div>
+        
+        <button type="button" class="accordion">split bet</button>
+        <div class="panel">
+            <button type="button" class="accordion">vertical splits</button><div class="panel">
+                <input type="radio" name="split-wager" value="vert-split-0"> 1, 4<br>
+                <input type="radio" name="split-wager" value="vert-split-1"> 4, 7<br>
+                <input type="radio" name="split-wager" value="vert-split-2"> 7, 10<br>
+                <input type="radio" name="split-wager" value="vert-split-3"> 10, 13<br>
+                <input type="radio" name="split-wager" value="vert-split-4"> 13, 16<br>
+                <input type="radio" name="split-wager" value="vert-split-5"> 16, 19<br>
+                <input type="radio" name="split-wager" value="vert-split-6"> 19, 22<br>
+                <input type="radio" name="split-wager" value="vert-split-7"> 22, 25<br>
+                <input type="radio" name="split-wager" value="vert-split-8"> 25, 28<br>
+                <input type="radio" name="split-wager" value="vert-split-9"> 28, 31<br>
+                <input type="radio" name="split-wager" value="vert-split-10"> 31, 34<br>
+                <input type="radio" name="split-wager" value="vert-split-11"> 2, 5<br>
+                <input type="radio" name="split-wager" value="vert-split-12"> 5, 8<br>
+                <input type="radio" name="split-wager" value="vert-split-13"> 8, 11<br>
+                <input type="radio" name="split-wager" value="vert-split-14"> 11, 14<br>
+                <input type="radio" name="split-wager" value="vert-split-15"> 14, 17<br>
+                <input type="radio" name="split-wager" value="vert-split-16"> 17, 20<br>
+                <input type="radio" name="split-wager" value="vert-split-17"> 20, 23<br>
+                <input type="radio" name="split-wager" value="vert-split-18"> 23, 26<br>
+                <input type="radio" name="split-wager" value="vert-split-19"> 26, 29<br>
+                <input type="radio" name="split-wager" value="vert-split-20"> 29, 32<br>
+                <input type="radio" name="split-wager" value="vert-split-21"> 32, 35<br>
+                <input type="radio" name="split-wager" value="vert-split-22"> 3, 6<br>
+                <input type="radio" name="split-wager" value="vert-split-23"> 6, 9<br>
+                <input type="radio" name="split-wager" value="vert-split-24"> 9, 12<br>
+                <input type="radio" name="split-wager" value="vert-split-25"> 12, 15<br>
+                <input type="radio" name="split-wager" value="vert-split-26"> 15, 18<br>
+                <input type="radio" name="split-wager" value="vert-split-27"> 18, 21<br>
+                <input type="radio" name="split-wager" value="vert-split-28"> 21, 24<br>
+                <input type="radio" name="split-wager" value="vert-split-29"> 24, 27<br>
+                <input type="radio" name="split-wager" value="vert-split-30"> 27, 30<br>
+                <input type="radio" name="split-wager" value="vert-split-31"> 30, 33<br>
+                <input type="radio" name="split-wager" value="vert-split-32"> 33, 36<br>
+            </div>
+            <button type="button" class="accordion">horizontal splits</button><div class="panel">
+                <input type="radio" name="split-wager" value="horizontal-split-0"> 1, 2<br>
+                <input type="radio" name="split-wager" value="horizontal-split-1"> 2, 3<br>
+                <input type="radio" name="split-wager" value="horizontal-split-2"> 4, 5<br>
+                <input type="radio" name="split-wager" value="horizontal-split-3"> 5, 6<br>
+                <input type="radio" name="split-wager" value="horizontal-split-4"> 7, 8<br>
+                <input type="radio" name="split-wager" value="horizontal-split-5"> 8, 9<br>
+                <input type="radio" name="split-wager" value="horizontal-split-6"> 10, 11<br>
+                <input type="radio" name="split-wager" value="horizontal-split-7"> 11, 12<br>
+                <input type="radio" name="split-wager" value="horizontal-split-8"> 13, 14<br>
+                <input type="radio" name="split-wager" value="horizontal-split-9"> 14, 15<br>
+                <input type="radio" name="split-wager" value="horizontal-split-10"> 16, 17<br>
+                <input type="radio" name="split-wager" value="horizontal-split-11"> 17, 18<br>
+                <input type="radio" name="split-wager" value="horizontal-split-12"> 19, 20<br>
+                <input type="radio" name="split-wager" value="horizontal-split-13"> 20, 21<br>
+                <input type="radio" name="split-wager" value="horizontal-split-14"> 22, 23<br>
+                <input type="radio" name="split-wager" value="horizontal-split-15"> 23, 24<br>
+                <input type="radio" name="split-wager" value="horizontal-split-16"> 25, 26<br>
+                <input type="radio" name="split-wager" value="horizontal-split-17"> 26, 27<br>
+                <input type="radio" name="split-wager" value="horizontal-split-18"> 28, 29<br>
+                <input type="radio" name="split-wager" value="horizontal-split-19"> 29, 30<br>
+                <input type="radio" name="split-wager" value="horizontal-split-20"> 31, 32<br>
+                <input type="radio" name="split-wager" value="horizontal-split-21"> 32, 33<br>
+                <input type="radio" name="split-wager" value="horizontal-split-22"> 34, 35<br>
+                <input type="radio" name="split-wager" value="horizontal-split-23"> 35, 36<br>
+                </div>
+        </div>
+    
+        <button type="button" class="accordion">street</button>
+        <div class="panel">
+            <input type="radio" name="street-wager" value="streetA"> 1, 2, 3<br>
+            <input type="radio" name="street-wager" value="streetB"> 4, 5, 6<br>
+            <input type="radio" name="street-wager" value="streetC"> 7, 8, 9<br>
+            <input type="radio" name="street-wager" value="streetD"> 10, 11, 12<br>
+            <input type="radio" name="street-wager" value="streetE"> 13, 14, 15<br>
+            <input type="radio" name="street-wager" value="streetF"> 16, 17, 18<br>
+            <input type="radio" name="street-wager" value="streetG"> 19, 20, 21<br>
+            <input type="radio" name="street-wager" value="streetH"> 22, 23, 24<br>
+            <input type="radio" name="street-wager" value="streetI"> 25, 26, 27<br>
+            <input type="radio" name="street-wager" value="streetJ"> 28, 29, 30<br>
+            <input type="radio" name="street-wager" value="streetK"> 31, 32, 33<br>
+            <input type="radio" name="street-wager" value="streetL"> 34, 25, 26<br>
+
+        </div>
+  
+   
+        <button type="button" class="accordion">corner</button>
+        <div class="panel">
+            <input type="radio" name="corner-wager" value="corners-0"> 1, 2, 4, 5<br>
+            <input type="radio" name="corner-wager" value="corners-1"> 2, 3, 5, 6<br>
+            <input type="radio" name="corner-wager" value="corners-2"> 4, 5, 7, 8<br>
+            <input type="radio" name="corner-wager" value="corners-3"> 5, 6, 8, 9<br>
+            <input type="radio" name="corner-wager" value="corners-4"> 7, 8, 10, 11<br>
+            <input type="radio" name="corner-wager" value="corners-5"> 8, 9, 11, 12<br>
+            <input type="radio" name="corner-wager" value="corners-6"> 10, 11, 13, 14<br>
+            <input type="radio" name="corner-wager" value="corners-7"> 11, 12, 14, 15<br>
+            <input type="radio" name="corner-wager" value="corners-8"> 13, 14, 16, 17<br>
+            <input type="radio" name="corner-wager" value="corners-9"> 14, 15, 17, 18<br>
+            <input type="radio" name="corner-wager" value="corners-10"> 16, 17, 19, 20<br>
+            <input type="radio" name="corner-wager" value="corners-11"> 17, 18, 20, 21<br>
+            <input type="radio" name="corner-wager" value="corners-12"> 19, 20, 22, 23<br>
+            <input type="radio" name="corner-wager" value="corners-13"> 20, 21, 23, 24<br>
+            <input type="radio" name="corner-wager" value="corners-14"> 22, 23, 25, 26<br>
+            <input type="radio" name="corner-wager" value="corners-15"> 23, 24, 26, 27<br>
+            <input type="radio" name="corner-wager" value="corners-16"> 25, 26, 28, 29<br>
+            <input type="radio" name="corner-wager" value="corners-17"> 26, 27, 29, 30<br>
+            <input type="radio" name="corner-wager" value="corners-18"> 28, 29, 31, 32<br>
+            <input type="radio" name="corner-wager" value="corners-19"> 29, 30, 32, 33<br>
+            <input type="radio" name="corner-wager" value="corners-20"> 31, 32, 34, 35<br>
+            <input type="radio" name="corner-wager" value="corners-21"> 32, 33, 35, 36<br>
+        </div>
+    
+        <button type="button" class="accordion">double street</button>
+        <div class="panel">
+            <input type="radio" name="double-street-wager" value="double1"> 1, 2, 3, 4, 5, 6<br>
+            <input type="radio" name="double-street-wager" value="double2"> 4, 5, 6, 7, 8, 9<br>
+            <input type="radio" name="double-street-wager" value="double3"> 7, 8, 9, 10, 11, 12<br>
+            <input type="radio" name="double-street-wager" value="double4"> 10, 11, 12, 13, 14, 15<br>
+            <input type="radio" name="double-street-wager" value="double5"> 13, 14, 15, 16, 17, 18<br>
+            <input type="radio" name="double-street-wager" value="double6"> 16, 17, 18, 19, 20, 21<br>
+            <input type="radio" name="double-street-wager" value="double7"> 19, 20, 21, 22, 23, 24<br>
+            <input type="radio" name="double-street-wager" value="double8"> 22, 23, 24, 25, 26, 27<br>
+            <input type="radio" name="double-street-wager" value="double9"> 25, 26, 27, 28, 29, 30<br>
+            <input type="radio" name="double-street-wager" value="double10"> 28, 29, 30, 31, 32, 33<br>
+            <input type="radio" name="double-street-wager" value="double11"> 31, 32, 33, 34, 35, 36<br>
+        </div>
+
+        <button type="button" class="accordion">basket</button>
+        <div class="panel">
+            <input type="radio" name="basket-wager" value="basket"> the basket (0, 00, 1, 2, 3)<br>
+        </div>
+   
+    </div>
+
+    <button type="button" class="accordion">Outside Bets</button>
+    <div class="panel">
+
+  <button type="button" class="accordion">red or black</button>
+  <div class="panel">
+        <input type="radio" name="red-black-wager" value="red"> red<br>
+        <input type="radio" name="red-black-wager" value="black"> black<br>
+
+  </div>
+  
+  <button type="button" class="accordion">even or odd</button>
+  <div class="panel">
+        <input type="radio" name="even-odd-wager" value="even"> even<br>
+        <input type="radio" name="even-odd-wager" value="odd"> odd<br>
+  </div>
+
+  <button type="button" class="accordion">high or low</button>
+  <div class="panel">
+        <input type="radio" name="high-low-wager" value="high"> high<br>
+        <input type="radio" name="high-low-wager" value="low"> low<br>
+  </div>
+
+  <button type="button" class="accordion">dozens</button>
+  <div class="panel">
+        <input type="radio" name="dozens-wager" value="firstDoz"> first dozen<br>
+        <input type="radio" name="dozens-wager" value="middleDoz"> middle dozen<br>
+        <input type="radio" name="dozens-wager" value="topDoz"> third dozen<br>
+  </div>
+
+  <button type="button" class="accordion">columns</button>
+  <div class="panel">
+        <input type="radio" name="columns-wager" value="columnA"> left column<br>
+        <input type="radio" name="columns-wager" value="columnB"> middle column<br>
+        <input type="radio" name="columns-wager" value="columnC"> right column<br>
+  </div>
+
+
+  
+    </div>
+
+    <button type="submit" id="add-wager" value="Add wager" value="Submit">Submit</button>
+
+<!-- do I need to put the <form> tag ahead of the beginning of my accordion menus? probably! -->
+<!-- the "to-dos" div will be renamed for the table wagers -->
+    
+    </form>
+    <div id="all-wagers"></div>
+
+
+    <!-- a field to input the value of the wager. include JS to ensure the field is not blank. -->
+
+    <!-- a submit button to commit the wager definition and the wager value to the table -->
+
+    <!-- div to show the bets that the player has committed to the table -->
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/roulette-logic.js"></script>
+   
+    <script>
+        $("#test").submit(function(event){
+            event.preventDefault();
+            var bets = $(":checked").serializeArray();
+            console.log(bets);
+            // user bets to server
+            $.post("/api/roulette-bets", bets, function (res){
+                console.log(res)
+            })
+            
+
+        })
+    </script>
+    
+</body>
+</html>
