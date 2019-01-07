@@ -41,15 +41,16 @@ $(document).ready(function () {
             $(".extramoney").show();
             $("#100").on("click", function () {
                 money += 100;
-
+                money.empty();
             });
             $("#50").on("click", function () {
                 money += 50;
                 counter = $("#counter").text(money);
+                money.empty();
             });
             $("#150").on("click", function () {
                 money += 150;
-
+                money.empty();
             });
         } else {
             $(".extramoney").hide();
