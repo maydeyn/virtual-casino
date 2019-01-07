@@ -17,7 +17,7 @@ var passport = require("./config/passport");
 //   database: "login_system"
 // });
 
- const passport = require("./config/passport");
+//  const passport = require("./config/passport");
 
 const LocalStrategy = require("passport-local").Strategy;
 // const mysql = require("mysql");

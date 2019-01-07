@@ -30,5 +30,9 @@ module.exports = function (app) {
   app.get("/slot", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/slot.html"));
   });
+  app.get("/roulette", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/roulette.html"));
+  });
+  
 
 };

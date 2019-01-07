@@ -52,4 +52,12 @@ module.exports = function (app) {
     }
   });
 
+  app.post("/api/roulette-bets", function (req, res){
+    console.log(req.body);
+    res.json({
+      test1: 1
+    })
+  })
+
+
 };
