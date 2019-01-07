@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
 var newGameButton = $('#newGameButton');
@@ -30,6 +31,8 @@ players.push(player);
 console.log(players);
 
 newGameButton.on("click", function(){
+    players[0].hand = [];
+    players[1].hand = [];
     for (var k = 0; k < 2; k++){
         for (var i = 0; i < players.length; i++){
             var card = deck.pop();
@@ -37,14 +40,16 @@ newGameButton.on("click", function(){
             
         };
     };
-    
+
     $("#p1").attr('src', players[1].hand[0].img_url);
     $("#p2").attr('src', players[1].hand[1].img_url);
     $("#d1").attr('src', players[0].hand[0].img_url);
     $("#d2").attr('src', players[0].hand[1].img_url);
 })
 
-
+hitButton.on("click", function(){
+    
+})
 
 function Card(suit, value, weight){
     this.name = suit.charAt(0) + value;
