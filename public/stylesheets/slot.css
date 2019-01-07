@@ -371,8 +371,8 @@ html {
 
 /********** PARALLAX LAYERS **********/
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#a8a61d), to(#ffffff));
-  background: linear-gradient(#a8a61d 0%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f89a2e), to(#f1d11f));
+  background: linear-gradient(#f89a2e 0%, #f1d11f 100%);
 }
 .background {
   position: absolute;
@@ -388,9 +388,9 @@ body {
   bottom: 0;
   left: 0;
   background-repeat: repeat-x;
-  background-position: top center;
-  background-size: 100vh;
-  background-image: url(../assets/images/title.png);
+  background-position: top left;
+  background-size: 200vh;
+  background-image: url(../assets/images/slots/title.gif);
   z-index: -100;
 }
 
@@ -404,24 +404,23 @@ body {
   left: 0;
   background-repeat: repeat-x;
   background-position: bottom center;
-  background-size: 100vh;
   background-image: url(../assets/images/slots/coins.gif);
-  z-index: 100;
+  z-index: 51;
 }
 .parallax__layer--back {
   padding: 0 100vw;
 }
 .parallax__layer--back .background {
-  opacity: 0.3;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: 17%;
   left: 0;
   background-repeat: repeat-x;
-  background-position: top center;
-  background-size: 150vh;
-  background-image: url(../assets/images/red.png);
-  z-index: 3000;
+  background-position: bottom left;
+  background-size: 20vh;
+  background-image: url(../assets/images/slotmachine.png);
+  z-index: 50;
+  opacity: 0.8;
 }
 
 .parallax__layer--base {
@@ -435,8 +434,8 @@ body {
   background-repeat: repeat-x;
   background-position: bottom center;
   background-size: 200vh;
-  background-image: url(../assets/images/light.png);
-  opacity: 0.7;
+  background-image: url(../assets/images/red.png);
+  opacity: 0.3;
   z-index: 4000;
 }
 
@@ -466,8 +465,8 @@ body {
 }
 
 .flicker-base {
-  -webkit-animation: flickerAnimation 1.5s infinite;
-  animation: flickerAnimation 1.5s infinite;
+  -webkit-animation: flickerAnimation 0.5s infinite;
+  animation: flickerAnimation 0.5s infinite;
 }
 
 .flicker-back {
@@ -478,8 +477,8 @@ body {
 /********** CHARACTER **********/
 #player {
   position: absolute;
-  bottom: 30px;
-  left: 350px;
+  bottom: 20px;
+  left: 20px;
   background: url(../assets/images/character/idle0.png) no-repeat;
   width: 200px;
   height: 200px;
