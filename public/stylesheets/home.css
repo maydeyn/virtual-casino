@@ -17,6 +17,7 @@ html {
   left: 10%;
 }
 
+/********** LOG-IN FORM **********/
 .form-popup {
   display: none;
   position: fixed;
@@ -62,6 +63,11 @@ html {
   width: 100%;
   margin-bottom: 10px;
   z-index: 9000;
+}
+
+/********** MUSIC TOGGLE **********/
+.nes-checkbox {
+  width: 300px;
 }
 
 /********** PARALLAX BACKGROUND **********/
@@ -114,12 +120,45 @@ body {
 .parallax__layer--door {
   padding: 0 150vw;
 }
-.parallax__layer--door,
-.background {
+.parallax__layer--door .background {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: 120wh;
   background-image: url(../assets/images/reddoor.png);
+  z-index: 2000;
+}
+
+.parallax__layer--doortwo {
+  padding: 0 150vw;
+}
+.parallax__layer--doortwo .background {
+  top: 0;
+  right: 0;
+  bottom: 10%;
+  left: 2500px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 120wh;
+  background-image: url(../assets/images/slotdoor.png);
+  z-index: 2000;
+}
+
+.parallax__layer--doorthree {
+  padding: 0 150vw;
+}
+.parallax__layer--doorthree .background {
+  top: 0;
+  right: 0;
+  bottom: 5%;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 120wh;
+  background-image: url(../assets/images/roulettedoor.png);
   z-index: 2000;
 }
 
