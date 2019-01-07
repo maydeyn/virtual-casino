@@ -2,11 +2,11 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#0e422b), to(#063f26));
   background: gradient(#0e422b 0%, #063f26 100%);
 }
-/*wondering about this part ??????*/
-/* body,
+
+body,
 html {
   height: 100%;
-} */
+}
 
 
 #money-holder {
@@ -53,7 +53,7 @@ html {
   -webkit-transform: rotateX(0deg);
   
   transition: -webkit-transform 1s;
-  /* -webkit-transition: -webkit-transform 1s; */
+  -webkit-transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
  
@@ -66,7 +66,7 @@ html {
   -webkit-transform: rotateX(45deg);
 
   transition: -webkit-transform 1s;
-  /* -webkit-transition: -webkit-transform 1s; */
+  -webkit-transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
   -webkit-transition-delay: 2s;
@@ -152,7 +152,7 @@ html {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: rgb(71, 4, 4);
+  background-color: rgb(84, 230, 40);
   -webkit-box-shadow: inset 0px 1px 5px rgb(170, 5, 5),
     inset 0px -1px 5px rgb(97, 7, 7);
   box-shadow: inset 0px 1px 5px rgb(170, 5, 5), inset 0px -1px 5px rgb(97, 7, 7);
