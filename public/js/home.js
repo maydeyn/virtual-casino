@@ -7,20 +7,20 @@ function startGame() {
 
 var myGameArea = {
   canvas: document.createElement("canvas"),
-  start: function() {
+  start: function () {
     this.canvas.width = 480;
     this.canvas.height = 270;
     this.context = this.canvas.getContext("2d");
     document.body.insertBefore(this.canvas, document.body.childNodes[0]);
     this.interval = setInterval(updateGameArea, 20);
-    window.addEventListener("keydown", function(e) {
+    window.addEventListener("keydown", function (e) {
       myGameArea.key = e.keyCode;
     });
-    window.addEventListener("keyup", function(e) {
+    window.addEventListener("keyup", function (e) {
       myGameArea.key = false;
     });
   },
-  clear: function() {
+  clear: function () {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
   }
 };
@@ -33,12 +33,12 @@ function component(width, height, color, x, y) {
   this.speedY = 0;
   this.x = x;
   this.y = y;
-  this.update = function() {
+  this.update = function () {
     ctx = myGameArea.context;
     ctx.fillStyle = color;
     ctx.fillRect(this.x, this.y, this.width, this.height);
   };
-  this.newPos = function() {
+  this.newPos = function () {
     this.x += this.speedX;
     this.y += this.speedY;
   };
@@ -89,15 +89,17 @@ function closeForm() {
 }
 
 // LOG IN
-$(document).ready(function() {
+$(document).ready(function () {
   // Getting references to our form and inputs
   var loginForm = $("form.login");
   var emailInput = $("input#username-input");
   var passwordInput = $("input#password-input");
 
   // When the form is submitted, we validate there's an email and password entered
-  loginForm.on("submit", function(event) {
+  loginForm.on("submit", function (event) {
     event.preventDefault();
+    console.log(emailInput);
+
     var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
@@ -119,11 +121,11 @@ $(document).ready(function() {
       email: email,
       password: password
     })
-      .then(function(data) {
+      .then(function (data) {
         window.location.replace(data);
         // If there's an error, log the error
       })
-      .catch(function(err) {
+      .catch(function (err) {
         console.log(err);
       });
   }
