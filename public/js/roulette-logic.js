@@ -124,6 +124,42 @@ $(document).ready(function(){
 
 // this constructor templates the table numbers
 
+function newBet(betOption){
+    if (betOption === "straight"){
+        
+    }else if(betOption === "split"){
+        
+    }else if(betOption === "street"){
+
+    }else if(betOption === "doublestreet"){
+
+    }else if(betOption === "corner"){
+
+    }else if(betOption === "column"){
+
+    }else if(betOption === "dozen"){
+
+    }else if(betOption === "evenodd"){
+
+    }else if(betOption === "redblack"){
+
+    }else if(betOption === "highlow"){
+
+    }else if(betOption === "basket"){
+
+    }
+    // split
+    // street
+    // doublestreet
+    // corner
+    // column
+    // dozen
+    // evenOrOdd
+    // redBlack
+    // highLow
+    // basket
+}
+
 function TableNumbers (value, red, even, zero){
     this.value = value;
     this.isRed = red;
