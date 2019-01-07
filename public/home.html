@@ -1,35 +1,80 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Virtual Casino</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./stylesheets/home.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/nes.css@0.0.2/css/nes.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <link rel="icon" href="./assets/images/icon.png" />
+  </head>
+  <body >
+    <div id="mobile-responsive">
+      <div class="title"></div>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Virtual Casino</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./stylesheets/home.css" />
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
-  <link href="https://unpkg.com/nes.css@0.0.2/css/nes.min.css" rel="stylesheet" />
-  <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
-  <link rel="icon" href="./assets/images/icon.png">
-</head>
+      <div id="player"></div>
+      <!-- <div id="map"></div> -->
 
-<body>
-  <div id="mobile-responsive">
-    <div class="title"></div>
-    <!-- <div id="map"></div> -->
-    <div id="player"></div>
-    <!--parallax background-->
-    <div class="parallax">
-      <button type="button" class="nes-btn is-warning new-game">
-        Log In
-      </button>
-      <button type="button" class="nes-btn is-warning continue">
-        Create Account
-      </button>
+      <!--parallax background-->
+      <div class="parallax">
+        <button
+          type="button"
+          class="nes-btn is-warning new-game open-button"
+          onclick="openForm()"
+        >
+          Log In
+        </button>
+        <button type="button" class="nes-btn is-warning continue">
+          Create Account
+        </button>
+        <div class="form-popup" id="myForm">
+          <form
+            action="/public/members.html"
+            class="nes-container is-rounded form-container login"
+          >
+            <label for="username"><b>Username</b></label>
+            <input
+              type="text"
+              placeholder="Enter Username"
+              name="username"
+              id="username-input"
+              required
+            />
 
-      <div class="parallax__layer parallax__layer--door">
-        <div class="background"></div>
+            <label for="psw"><b>Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              id="password-input"
+              required
+            />
 
+            <button type="submit" class="nes-btn is-success">Login</button>
+            <button
+              type="button"
+              class="nes-btn is-error"
+              onclick="closeForm()"
+            >
+              Cancel
+            </button>
+          </form>
+        </div>
+        <!--parallax background-->
         <div class="parallax__layer parallax__layer--title">
           <div class="background"></div>
         </div>
@@ -39,8 +84,11 @@
         <div class="parallax__layer parallax__layer--back flicker-back">
           <div class="background"></div>
         </div>
+        <div class="parallax__layer parallax__layer--door">
+            <div class="background"></div>
         <div class="parallax__layer parallax__layer--base flicker-base">
           <div class="background"></div>
+  
         </div>
       </div>
     </div>
@@ -60,6 +108,5 @@
 
     <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
     <script src="./js/home.js"></script>
-</body>
-
+  </body>
 </html>
