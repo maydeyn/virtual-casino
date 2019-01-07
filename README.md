@@ -8,3 +8,6 @@ Borrowed logic from https://codepen.io/Terramaster/pen/QyNJOM?editors=1101
 
 ## slot Game Music
 http://freemusicarchive.org/search/?adv=1&quicksearch=+slot&search-genre=Genres&duration_from=&duration_to=
+
+##slot reel sound
+https://freesound.org/people/JoannaLuna/sounds/448842/
