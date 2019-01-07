@@ -1,14 +1,3 @@
-body {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#0e422b),
-    to(#063f26)
-  );
-  background: gradient(#0e422b 0%, #063f26 100%);
-}
-
 body,
 html {
   height: 100%;
@@ -33,10 +22,8 @@ html {
 .item {
   width: 400px;
   height: 400px;
-
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-
   transform-origin: 50px 50px -122px;
   -webkit-transform-origin: 50px 50px -122px;
   position: relative;
@@ -57,8 +44,6 @@ html {
 
   transition: -webkit-transform 1s;
 
-  /* -webkit-transition: -webkit-transform 1s; */
-
   -webkit-transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
@@ -69,11 +54,7 @@ html {
 .item.state2 {
   transform: rotateX(45deg);
   -webkit-transform: rotateX(45deg);
-
   transition: -webkit-transform 1s;
-
-  /* -webkit-transition: -webkit-transform 1s; */
-
   -webkit-transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
@@ -161,7 +142,7 @@ html {
   background-position: center center;
   background-repeat: no-repeat;
 
-  background-color: rgb(84, 230, 40);
+  background-color: rgb(211, 255, 123);
   -webkit-box-shadow: inset 0px 1px 5px rgb(170, 5, 5),
     inset 0px -1px 5px rgb(97, 7, 7);
   box-shadow: inset 0px 1px 5px rgb(170, 5, 5), inset 0px -1px 5px rgb(97, 7, 7);
@@ -215,7 +196,7 @@ html {
   background-image: url(../assets/images/slots/7.png);
 }
 .item div:nth-child(9) {
-  background: gold;
+  background: rgb(255, 231, 92);
   top: -72px;
   height: 242px;
   -webkit-transform: rotateY(0deg) translate3d(0px, 0px, -122px);
@@ -320,7 +301,7 @@ html {
 }
 .salute {
   display: none;
-  background-image: url(../assets/images/slots/cherry.png);
+  background-image: url(../assets/images/slots/money.gif);
   background-repeat: no-repeat;
   background-size: contain;
   width: 100px;
@@ -334,13 +315,173 @@ html {
   display: block;
 }
 .salute.two {
-  background-image: url(../assets/images/slots/apple.png);
+  background-image: url(../assets/images/slots/money.gif);
   left: auto;
   right: 0;
 }
 .salute.three {
-  background-image: url(../assets/images/slots/dragonfruit.png);
+  background-image: url(../assets/images/slots/money.gif);
   top: auto;
   left: 0;
   bottom: 0;
+}
+
+/******* BACKGROUND LAYERS *******/
+.parallax {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax__layer--deep {
+  -webkit-transform: translateZ(-2px) scale(3);
+  transform: translateZ(-2px) scale(3);
+}
+
+.parallax__layer {
+  pointer-events: none;
+}
+/********** NES BUTTONS STYLING **********/
+#btn-spin {
+  z-index: 9000;
+  position: absolute;
+  top: 6%;
+  left: 10%;
+}
+
+/********** PARALLAX LAYERS **********/
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a8a61d), to(#ffffff));
+  background: linear-gradient(#a8a61d 0%, #ffffff 100%);
+}
+.background {
+  position: absolute;
+  display: block;
+}
+
+.parallax__layer--title {
+  padding: 0 100vw;
+}
+.parallax__layer--title .background {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: 100vh;
+  background-image: url(../assets/images/title.png);
+  z-index: -100;
+}
+
+.parallax__layer--deep {
+  padding: 0 100vw;
+}
+.parallax__layer--deep .background {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: 100vh;
+  background-image: url(../assets/images/slots/coins.gif);
+  z-index: 100;
+}
+.parallax__layer--back {
+  padding: 0 100vw;
+}
+.parallax__layer--back .background {
+  opacity: 0.3;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: 150vh;
+  background-image: url(../assets/images/red.png);
+  z-index: 3000;
+}
+
+.parallax__layer--base {
+  padding: 0 100vw;
+}
+.parallax__layer--base .background {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: 200vh;
+  background-image: url(../assets/images/light.png);
+  opacity: 0.7;
+  z-index: 4000;
+}
+
+/********** PARALLAX LAYERS ANIMATIONS **********/
+@-webkit-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.flicker-base {
+  -webkit-animation: flickerAnimation 1.5s infinite;
+  animation: flickerAnimation 1.5s infinite;
+}
+
+.flicker-back {
+  -webkit-animation: flickerAnimation 0.5s infinite;
+  animation: flickerAnimation 0.5s infinite;
+}
+
+/********** CHARACTER **********/
+#player {
+  position: absolute;
+  bottom: 30px;
+  left: 350px;
+  background: url(../assets/images/character/idle0.png) no-repeat;
+  width: 200px;
+  height: 200px;
+  z-index: 100;
 }

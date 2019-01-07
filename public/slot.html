@@ -1,87 +1,120 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Slot Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/nes.css@1.0.0/css/nes.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./stylesheets/slot.css"
+    />
+    <link rel="icon" href="./assets/images/icon.png" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Slot Game</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
-  <link href="https://unpkg.com/nes.css@1.0.0/css/nes.min.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./stylesheets/slot.css" />
-</head>
+  <body>
+    <div class="parallax">
+        <div class="btn_container">
+            <button type="button" class="nes-btn is-success" id="btn-spin">
+              REEL
+              <div class="side"></div>
+              <div class="side"></div>
+              <div class="side"></div>
+              <div class="side"></div>
+              <div class="side"></div>
+            </button>
+            <audio id="sound">
+              <source id="playsound" src="" type="audio/mpeg" />
+            </audio>
+            <div class="container" id="money-holder">
+              Your money $ <span id="counter">100</span> <br />
+            </div>
+            <div class="extramoney">
+              <button class="hidden" id="100">$100</button>
+              <button class="hidden" id="50">$50</button>
+              <button class="hidden" id="150">$150</button>
+            </div>
+          </div>
+    
+      <div class="parallax__layer parallax__layer--title">
+          <div class="background"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--deep">
+          <div class="background"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--back flicker-back">
+          <div class="background"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--door">
+          <div class="background"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--doortwo">
+          <div class="background"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--doorthree">
+          <div class="background"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--base flicker-base">
+          <div class="background"></div>
+        </div>
+      </div>
 
-<body>
-  <div class="container-fluid">
-    <div class="slots">
-      <div class="item">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div class="container-fluid">
+      <div class="slots">
+        <div class="item">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="item">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="item">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
-      <div class="item">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div class="item">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+
+      <div class="salute"></div>
+      <div class="salute two"></div>
+      <div class="salute three"></div>
     </div>
-    <div class="btn_container">
-
-      <button type="button" class="nes-btn is-success" id="btn-spin">
-        REEL
-        <div class="side"></div>
-        <div class="side"></div>
-        <div class="side"></div>
-        <div class="side"></div>
-        <div class="side"></div>
-      </button>
-      <audio id="sound">
-        <source id="playsound" src="" type="audio/mpeg">
-      </audio>
-      <div class=container id="money-holder">Your money $ <span id="counter">100</span>
-        <br>
-      </div>
-      <div class="extramoney">
-        <button class="hidden" id="100">$100</button>
-        <button class="hidden" id="50">$50</button>
-        <button class="hidden" id="150">$150</button>
-      </div>
-    </div>
-
-
-    <div class="salute"></div>
-    <div class="salute two"></div>
-    <div class="salute three"></div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="./js/slot.js"></script>
-
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/slot.js"></script>
+  </body>
 </html>
