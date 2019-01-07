@@ -32,10 +32,17 @@
 
     <table align="center">
         <tr>
-            <td><input type="button" id="hitButton" value="Hit" onclick="hit()">
-                <input type="button" id="standButton" value="Stand" onclick="stand()">
+            <td>
+                <p>Your score: <span id="yourScore">0</span> Money: $<span id="money">0</span></p>
+                <input type="button" id="hitButton" value="Hit" >
+                <input type="button" id="standButton" value="Stand" >
                   <input type="button" id="newGameButton" value="New Game">
                 <!-- <input type="button" id="newGameButton" value="New Game" onclick="startHand()"> -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="winOrLose"></div>
             </td>
         </tr>
     </table>
