@@ -4,3 +4,7 @@ https://www.codementor.io/mayowa.a/how-to-build-a-simple-session-based-authentic
 
 ##SLot Machine
 Borrowed logic from https://codepen.io/Terramaster/pen/QyNJOM?editors=1101
+
+
+## slot Game Music
+http://freemusicarchive.org/search/?adv=1&quicksearch=+slot&search-genre=Genres&duration_from=&duration_to=
