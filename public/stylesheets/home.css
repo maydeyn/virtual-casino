@@ -266,7 +266,7 @@ body {
   position: absolute;
   bottom: 30px;
   left: 350px;
-  background: url(../assets/images/character/idle0.png) no-repeat;
+  background: url(../assets/images/character/player.gif) no-repeat;
   width: 200px;
   height: 200px;
   z-index: 100;
