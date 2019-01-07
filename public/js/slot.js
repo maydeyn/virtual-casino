@@ -60,10 +60,17 @@ $(document).ready(function () {
         playAudio();
         pauseAudio();
     });
+    $("#play").on("click", function () {
+        soundOn();
+    });
+    $("#pause").on("click", function () {
+        soundOff();
+    });
+
     function playAudio() {
         isAnimate = true;
-        playsound.src = "../audio/04515.mp3";
-        playsound.play();
+        // playsound.src = "../audio/04515.mp3";
+        // playsound.play();
         // alert("the song is playing");
     }
     function pauseAudio() {
@@ -71,3 +78,9 @@ $(document).ready(function () {
         // sound.pause();
     }
 });
+function soundOn() {
+    document.getElementById("sound").play();
+};
+function soundOff() {
+    document.getElementById("sound").pause();
+};
