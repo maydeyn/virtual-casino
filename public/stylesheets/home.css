@@ -17,12 +17,13 @@ html {
   left: 10%;
 }
 
+/********** LOG-IN FORM **********/
 .form-popup {
   display: none;
   position: fixed;
   top: 12%;
   left: 10%;
-  z-index: 9000;
+  z-index: 8000;
 }
 
 /* Add styles to the form container */
@@ -31,6 +32,7 @@ html {
   padding: 10px;
   background: white;
   z-index: 9000;
+  position: fixed;
 }
 
 /* Full-width input fields */
@@ -62,6 +64,11 @@ html {
   width: 100%;
   margin-bottom: 10px;
   z-index: 9000;
+}
+
+/********** MUSIC TOGGLE **********/
+.nes-checkbox {
+  width: 300px;
 }
 
 /********** PARALLAX BACKGROUND **********/
@@ -114,12 +121,45 @@ body {
 .parallax__layer--door {
   padding: 0 150vw;
 }
-.parallax__layer--door,
-.background {
+.parallax__layer--door .background {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: 120wh;
   background-image: url(../assets/images/reddoor.png);
+  z-index: 2000;
+}
+
+.parallax__layer--doortwo {
+  padding: 0 150vw;
+}
+.parallax__layer--doortwo .background {
+  top: 0;
+  right: 0;
+  bottom: 10%;
+  left: 2500px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 120wh;
+  background-image: url(../assets/images/slotdoor.png);
+  z-index: 2000;
+}
+
+.parallax__layer--doorthree {
+  padding: 0 150vw;
+}
+.parallax__layer--doorthree .background {
+  top: 0;
+  right: 0;
+  bottom: 5%;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 120wh;
+  background-image: url(../assets/images/roulettedoor.png);
   z-index: 2000;
 }
 
@@ -152,6 +192,7 @@ body {
   background-size: 120vh;
   background-image: url(../assets/images/bar.png);
   opacity: 0.7;
+  z-index: 100;
 }
 .parallax__layer--back {
   padding: 0 250vw;
@@ -224,11 +265,11 @@ body {
 #player {
   position: absolute;
   bottom: 30px;
-  left: 100px;
+  left: 350px;
   background: url(../assets/images/character/idle0.png) no-repeat;
   width: 200px;
   height: 200px;
-  z-index: 3000;
+  z-index: 100;
 }
 
 #map {
@@ -247,20 +288,15 @@ body {
   display: none;
 }
 
+/* iPhone X, 6/7/8 plus, Pixel 2 XL PORTRAIT */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
   #mobile-responsive {
     display: none;
   }
   #mobile-responsive-warning {
     display: block;
+    padding: 30px;
   }
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
-  #mobile-responsive-warning {
-    display: none;
-  }
-
   .nes-smartphone {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
@@ -276,7 +312,105 @@ body {
     text-align: center;
     color: black;
   }
+}
+/* pixel 2, iphone 6/7/8 PORTRAIT */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  #mobile-responsive {
+    display: none;
+  }
+  #mobile-responsive-warning {
+    display: block;
+    padding: 30px;
+  }
+  .nes-smartphone {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .nes-balloon {
+    width: auto;
+  }
+  #mobile-responsive-warning {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+  }
+}
+/* iphone 5/5E, galaxy S5 PORTRAIT */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  #mobile-responsive {
+    display: none;
+  }
+  #mobile-responsive-warning {
+    display: block;
+    padding: 30px;
+  }
+  .nes-smartphone {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .nes-balloon {
+    width: auto;
+  }
+  #mobile-responsive-warning {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+  }
+}
 
+/* iPhone X, 6/7/8 plus, Pixel 2 XL LANDSCAPE */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  #mobile-responsive-warning {
+    display: none;
+  }
+
+  #mobile-responsive-warning {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+  }
+
+  .form-popup {
+    display: none;
+    position: fixed;
+    top: 3%;
+    left: 3%;
+    z-index: 9000;
+  }
+
+  .form-container {
+    max-width: 450px;
+    max-height: 300px;
+    padding: 10px;
+    background: white;
+    z-index: 2000;
+  }
+
+  .parallax__layer--door {
+    top: 0;
+    right: 0;
+    bottom: 0px;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 10wh;
+  }
+}
+
+/* pixel 2, iphone 6/7/8 LANDSCAPE */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  #mobile-responsive-warning {
+    display: none;
+  }
   .form-popup {
     display: none;
     position: fixed;

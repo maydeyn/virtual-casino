@@ -22,7 +22,8 @@
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
     <link rel="icon" href="./assets/images/icon.png" />
   </head>
-  <body >
+
+  <body>
     <div id="mobile-responsive">
       <div class="title"></div>
 
@@ -38,9 +39,11 @@
         >
           Log In
         </button>
-        <button type="button" class="nes-btn is-warning continue">
-          Create Account
-        </button>
+        <a href="/signup">
+          <button type="button" class="nes-btn is-warning continue">
+            Create Account
+          </button>
+        </a>
         <div class="form-popup" id="myForm">
           <form
             action="/public/members.html"
@@ -49,7 +52,8 @@
             <label for="username"><b>Username</b></label>
             <input
               type="text"
-              placeholder="Enter Username"
+              class="form-control"
+              placeholder="Enter email"
               name="username"
               id="username-input"
               required
@@ -58,13 +62,20 @@
             <label for="psw"><b>Password</b></label>
             <input
               type="password"
+              class="form-control"
               placeholder="Enter Password"
               name="psw"
               id="password-input"
               required
             />
 
-            <button type="submit" class="nes-btn is-success">Login</button>
+            <button
+              type="submit"
+              class="nes-btn is-success"
+              class="btn btn-default"
+            >
+              <a href="/members">Login </a>
+            </button>
             <button
               type="button"
               class="nes-btn is-error"
@@ -85,10 +96,16 @@
           <div class="background"></div>
         </div>
         <div class="parallax__layer parallax__layer--door">
-            <div class="background"></div>
+          <div class="background"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--doortwo">
+          <div class="background"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--doorthree">
+          <div class="background"></div>
+        </div>
         <div class="parallax__layer parallax__layer--base flicker-base">
           <div class="background"></div>
-  
         </div>
       </div>
     </div>
@@ -108,5 +125,6 @@
 
     <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
     <script src="./js/home.js"></script>
+    <script src="./js/signup.js"></script>
   </body>
 </html>

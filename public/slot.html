@@ -13,70 +13,83 @@
 
 <body>
   <div class="container-fluid">
-    <div class="slots">
-      <div class="item">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div class="item">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div class="item">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-    <div class="btn_container">
-      <button type="button" class="nes-btn is-success" id="btn-spin">
-        REEL
-        <div class="side"></div>
-        <div class="side"></div>
-        <div class="side"></div>
-        <div class="side"></div>
-        <div class="side"></div>
+    <div class="sounds">
+      <button id="play">Sound On
+        <audio id="sound">
+          <source id="playsound" src="./audio/Podington_Bear_-_Slotcar.mp3" type="audio/mpeg">
+        </audio>
       </button>
-      <div class=container id="money-holder">Your money $ <span id="counter">100</span>
-        <br>
+      <button id="pause">Sound Off</button>
+
+      <div class="slots">
+        <div class="item">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="item">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="item">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
-      <div class="extramoney">
-        <button class="hidden" id="100">$100</button>
-        <button class="hidden" id="50">$50</button>
-        <button class="hidden" id="150">$150</button>
+      <div class="btn_container">
+
+        <button type="button" class="nes-btn is-success" id="btn-spin">
+          REEL
+          <div class="side"></div>
+          <div class="side"></div>
+          <div class="side"></div>
+          <div class="side"></div>
+          <div class="side"></div>
+        </button>
+        <div class=container id="money-holder">Your money $ <span id="counter">100</span>
+          <br>
+        </div>
+        <div class="extramoney">
+          <button class="hidden" id="100">$100</button>
+          <button class="hidden" id="50">$50</button>
+          <button class="hidden" id="150">$150</button>
+        </div>
       </div>
+
+
+      <div class="salute"></div>
+      <div class="salute two"></div>
+      <div class="salute three"></div>
     </div>
 
 
-    <div class="salute"></div>
-    <div class="salute two"></div>
-    <div class="salute three"></div>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./js/slot.js"></script>
+
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./js/slot.js"></script>
 
 </html>
