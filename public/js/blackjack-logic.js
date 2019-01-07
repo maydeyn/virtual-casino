@@ -33,6 +33,7 @@ newGameButton.on("click", function(){
     $("#p1").attr('src', players[1].hand[0].img_url);
     $("#p2").attr('src', players[1].hand[1].img_url);
     $("#d1").attr('src', players[0].hand[0].img_url);
+    $("#d2").attr('src', `../public/assets/images/cards/${backCard}.png`);
     $("#d3").attr('src', `../public/assets/images/cards/${backCard}.png`);
     $("#p3").attr('src', `../public/assets/images/cards/${backCard}.png`);
     $("#p4").attr('src', `../public/assets/images/cards/${backCard}.png`);
