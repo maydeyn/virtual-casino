@@ -3,17 +3,21 @@ html {
   height: 100%;
 }
 
+/********* USER DATA DISPLAY ********/
 #money-holder {
-  position: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 150px;
-  height: 100px;
-  background: white;
-  text-align: center;
+  position: absolute;
+  top: 35%;
+  left: 6%;
+  background: rgb(221, 255, 68);
+  z-index: 9000;
 }
+.extramoney {
+  position: absolute;
+  top: 45%;
+  left: 6%;
+  z-index: 9000;
+}
+
 .slots {
   position: absolute;
   top: 0;
@@ -148,7 +152,7 @@ html {
   background-position: center center;
   background-repeat: no-repeat;
 
-  background-color: rgb(211, 255, 123);
+  background-color: #bdff71;
   -webkit-box-shadow: inset 0px 1px 5px rgb(170, 5, 5),
     inset 0px -1px 5px rgb(97, 7, 7);
   box-shadow: inset 0px 1px 5px rgb(170, 5, 5), inset 0px -1px 5px rgb(97, 7, 7);
@@ -248,18 +252,18 @@ html {
   height: 300px;
   z-index: 1;
 }
-.container {
-  position: relative;
-  top: 10px;
-  right: 0px;
+
+.sounds {
+  position: absolute;
+  top: 6%;
+  left: 6%;
+  z-index: 9000;
 }
 
-.nes-btn .is-success {
-  position: relative;
-  top: 20px;
-  left: 600px;
-  right: 0;
-  bottom: 0;
+.spin {
+  position: absolute;
+  top: 40%;
+  left: 20%;
 }
 
 .spin_btn.active {
@@ -460,7 +464,7 @@ body {
   background-size: 200vh;
   background-image: url(../assets/images/red.png);
   opacity: 0.3;
-  z-index: 4000;
+  z-index: -1000;
 }
 
 /********** PARALLAX LAYERS ANIMATIONS **********/
