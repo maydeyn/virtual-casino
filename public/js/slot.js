@@ -6,6 +6,8 @@ $(document).ready(function () {
     var counter = $("#counter").text(money);
     var slots = $(".slots .item");
     var salute = $(".salute");
+    var sound = $("#sound");
+    var playsound = $("sound");
     $("#btn-spin").on("click", function () {
         if (!isAnimate) {
             isAnimate = true;
@@ -55,6 +57,17 @@ $(document).ready(function () {
         } else {
             $(".extramoney").hide();
         };
+        playAudio();
+        pauseAudio();
     });
-
+    function playAudio() {
+        isAnimate = true;
+        playsound.src = "../audio/04515.mp3";
+        playsound.play();
+        // alert("the song is playing");
+    }
+    function pauseAudio() {
+        isAnimate = false;
+        // sound.pause();
+    }
 });

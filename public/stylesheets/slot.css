@@ -8,6 +8,7 @@ body {
   );
   background: gradient(#0e422b 0%, #063f26 100%);
 }
+
 body,
 html {
   height: 100%;
@@ -55,7 +56,9 @@ html {
   -webkit-transform: rotateX(0deg);
 
   transition: -webkit-transform 1s;
+
   /* -webkit-transition: -webkit-transform 1s; */
+
   -webkit-transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
@@ -68,7 +71,9 @@ html {
   -webkit-transform: rotateX(45deg);
 
   transition: -webkit-transform 1s;
+
   /* -webkit-transition: -webkit-transform 1s; */
+
   -webkit-transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
@@ -155,7 +160,8 @@ html {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: rgb(255, 230, 92);
+
+  background-color: rgb(84, 230, 40);
   -webkit-box-shadow: inset 0px 1px 5px rgb(170, 5, 5),
     inset 0px -1px 5px rgb(97, 7, 7);
   box-shadow: inset 0px 1px 5px rgb(170, 5, 5), inset 0px -1px 5px rgb(97, 7, 7);
