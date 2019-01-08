@@ -24,7 +24,8 @@ module.exports = function (app) {
     console.log(req.body);
     db.User.create({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      bank: 1000
     }).then(function () {
       res.redirect(307, "/api/login");
     }).catch(function (err) {
@@ -33,7 +34,28 @@ module.exports = function (app) {
       // res.status(422).json(err.errors[0].message);
     });
   });
+  app.get("/api/user_bank", function (req, res) {
+    res.json(db.User.bank);
+    console.log(db.User.bank);
+  });
+  app.put("/api/user_bank", function (req, res) {
+    console.log(req.body);
+    var newTotal = parseInt(req.body.newTotal);
+    var userEmail = req.body.userEmail;
+    console.log(userEmail);
+    // console.log(req.body.bank);
 
+    db.User.update(
+      { bank: newTotal },
+      { where: { email: userEmail } }
+
+    ).then(function (thingWeGotBack) {
+      console.log('this is thing we got back from ', thingWeGotBack);
+      res.json();
+    });
+
+
+  })
   // Route for logging user out
   app.get("/logout", function (req, res) {
     req.logout();
@@ -51,9 +73,25 @@ module.exports = function (app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
-        id: req.user.id
+        id: req.user.id,
+        bank: req.user.bank
       });
     }
   });
+
+  // app.post('/updateBank', function (req, res) {
+
+  //   var newTotal = req.body.total
+  //   var userEmail = req.body.userEmail
+
+  //   db.User.update(
+  //     { bank: newTotal },
+  //     { returning: true, where: { email: userEmail } }
+  //   ).then(function (thingWeGotBack) {
+  //     console.log('this is thing we got back from ', thingWeGotBack);
+  //   })
+  // })
+
+
 
 };
