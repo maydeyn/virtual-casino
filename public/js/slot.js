@@ -2,12 +2,19 @@ $(document).ready(function () {
     var isAnimate = false;
     var randomNum;
     var winNums = [];
-    var money = $("#money-holder");
-    var counter = $("#counter").text(money);
+    var money = $("#money-holder1");
+    // var counter = $("#counter").text(money);
+    var counter;
     var slots = $(".slots .item");
     var salute = $(".salute");
     var sound = $("#sound");
     var reelsound = $("reelsound");
+    $.get("/api/user_data").then(function (data) {
+        // res.json(db.User.bank);
+        console.log(data);
+        $("#counter1").text(parseInt(data.bank));
+
+    })
     // jQuery.ajaxSetup({ async: false });
     $("#btn-spin").on("click", function () {
         if (!isAnimate) {
@@ -28,15 +35,41 @@ $(document).ready(function () {
                 $("#btn-spin").removeClass("active");
                 if (winNums[0] == winNums[1] && winNums[0] == winNums[2]) {
                     salute.addClass("active");
-                    money += 10;
-                    counter = $("#counter").text(money);
+                    counter = $("#counter1");
+                    console.log(counter);
+
+                    // counter += 10;
+                    // counter = $("#counter").text(money);
                 } else {
-                    money -= 10;
-                    counter = $("#counter").text(money);
+                    // counter -= 10;
+                    counter = $("#counter1").text();
+                    console.log(counter);
+                    counter -= 10;
+                    $("#counter1").text(counter);
+                    // var sendData = $("#counter1").text(counter);
+                    // console.log(sendData);
+
 
                 }
+                // $.put("/api/user_data").then(function (data) {
+                //     // res.json(db.User.bank);
+                //     console.log(data);
+                //     $("#counter1").text(parseInt(data.bank));
+
+                // })
+
+                $.ajax({
+                    url: '/api/user_bank',    //Your api url
+                    type: 'PUT',   //type is any HTTP method
+                    data: {
+                        data: counter
+                    },      //Data as js object
+                    success: function () {
+                    }
+                })
 
             }, 8000);
+
 
         }
 

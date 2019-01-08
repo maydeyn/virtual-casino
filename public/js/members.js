@@ -3,6 +3,7 @@
 $(document).ready(function () {
 
   $.get("/api/user_data").then(function (data) {
+    console.log(data);
 
     $(".member-name").text(data.email);
     //  async: false;
@@ -10,8 +11,57 @@ $(document).ready(function () {
     $("#money-holder").text("Your bank: $" + data.bank);
   });
   const money = $("#money-holder");
+  // function updateBank(bank) {
+  //   $.ajax({
+  //     method: "PUT",
+  //     url: "/api/user_bank",
+  //     data:
+  //       JSON.stringify({
+  //         "bank": { "newTotal": 900 },
 
-  console.log(money);
+  //         "where": { "userEmail": this.email }
+  //       })
+  //   },
+  //   ).then();
+  // }
+  // updateBank();
+  // function update() {
+
+  // var bankValue = $("#money-holder").first().attr("bank");
+  //   var request = $.ajax({
+  //     url: "/api/user_bank",
+  //     method: "PUT",
+  //     data: JSON.stringify({
+  //       bank: newTotal,
+  //       where: { email: userEmail }
+  //     }),
+  //     dataType: "JSON"
+  //   });
+
+  //   request.done(function (msg) {
+  //     $("#counter").text(msg);
+  //   });
+  // }
+  // update();
+  // $.ajax({
+
+  //   url: "/api/user_bank",
+
+  //   type: 'PUT',
+
+  //   data: JSON.stringify({
+  //     "bank": { "newTotal": 1000 },
+
+  //   }),
+
+  //   dataType: { "userEmail": "", "Type": "Text" },
+  //   headers: {
+
+  //     'X-CSRF-TOKEN': localStorage.getItem("XSRF.Token")
+
+  //   }
+
+  // });
 
   // $.ajax({
   //   method: "PUT",
