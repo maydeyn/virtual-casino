@@ -1,7 +1,7 @@
 # Virtual Casino
 [Live link on Heroku](https://virtual-casino.herokuapp.com)
 
-![Virtual-casino](/image)
+![Virtual-casino](/public/assets/images/game.png)
 
 ## Contributors
 #### Front-end
