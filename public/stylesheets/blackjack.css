@@ -11,7 +11,7 @@ html {
 
 .user {
   position: absolute;
-  top: 65%;
+  top: 85%;
   left: 39%;
   color: gold;
 }
@@ -30,14 +30,16 @@ html {
 
 .mainmenu {
   position: absolute;
-  top: 80%;
+  top: 85%;
   left: 45%;
   z-index: 9000;
 }
 
 /******* TEXT STYLING *******/
 #winOrLose {
-  padding: 10px;
+  position: relative;
+  top: 0;
+  color: white;
   font-size: 30px;
   text-align: center;
 }
@@ -303,7 +305,7 @@ body {
   .user {
     position: absolute;
     left: 350px;
-    top: -150px;
+    top: -200px;
     width: 30px;
     color: gold;
   }

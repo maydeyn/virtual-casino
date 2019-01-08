@@ -11,9 +11,15 @@ html {
 /********** NES BUTTONS STYLING **********/
 .new-game,
 .continue {
-  z-index: 9000;
   position: absolute;
+  z-index: 9000;
   top: 6%;
+  left: 10%;
+}
+
+.logout {
+  position: absolute;
+  z-index: 9000;
   left: 10%;
 }
 
@@ -133,6 +139,17 @@ body {
   z-index: 2000;
 }
 
+.blackjack {
+  top: 0;
+  right: 80;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 120wh;
+  z-index: 2000;
+}
+
 .parallax__layer--doortwo {
   padding: 0 150vw;
 }
@@ -148,7 +165,7 @@ body {
   z-index: 2000;
 }
 
-.parallax__layer--doorthree {
+/* .parallax__layer--doorthree {
   padding: 0 150vw;
 }
 .parallax__layer--doorthree .background {
@@ -161,7 +178,7 @@ body {
   background-size: 120wh;
   background-image: url(../assets/images/roulettedoor.png);
   z-index: 2000;
-}
+} */
 
 .parallax__layer--title {
   padding: 0 300vw;
@@ -176,7 +193,7 @@ body {
   background-size: 300vh;
   background-image: url(../assets/images/title.png);
   opacity: 0.7;
-  z-index: -100;
+  z-index: -200;
 }
 
 .parallax__layer--deep {
@@ -207,7 +224,7 @@ body {
   background-position: top center;
   background-size: 150vh;
   background-image: url(../assets/images/red.png);
-  z-index: 3000;
+  z-index: -100;
 }
 
 .parallax__layer--base {
@@ -223,7 +240,7 @@ body {
   background-size: 200vh;
   background-image: url(../assets/images/light.png);
   opacity: 0.5;
-  z-index: 4000;
+  z-index: -100;
 }
 
 /********** PARALLAX LAYERS ANIMATIONS **********/
@@ -272,11 +289,14 @@ body {
   z-index: 100;
 }
 
-#map {
-  border: 1px solid black;
-  position: relative;
-  height: 300px;
-  width: 1000px;
+.userInfo {
+  position: fixed;
+  z-index: 3000;
+  top: 10%;
+  margin: auto;
+  width: 50%;
+  z-index: 8000;
+  background: rgb(255, 199, 14);
 }
 
 /* ********* MOBBILE RESPONSIVE **********/
