@@ -2,12 +2,13 @@ $(document).ready(function () {
     var isAnimate = false;
     var randomNum;
     var winNums = [];
-    var money = 20;
+    var money = $("#money-holder");
     var counter = $("#counter").text(money);
     var slots = $(".slots .item");
     var salute = $(".salute");
     var sound = $("#sound");
     var reelsound = $("reelsound");
+    // jQuery.ajaxSetup({ async: false });
     $("#btn-spin").on("click", function () {
         if (!isAnimate) {
             isAnimate = true;
@@ -38,25 +39,7 @@ $(document).ready(function () {
             }, 8000);
 
         }
-        if (money === 10) {
-            isAnimate = false;
-            $(".extramoney").show();
-            $("#100").on("click", function () {
-                money += 100;
-                money.empty();
-            });
-            $("#50").on("click", function () {
-                money += 50;
-                counter = $("#counter").text(money);
-                money.empty();
-            });
-            $("#150").on("click", function () {
-                money += 150;
-                money.empty();
-            });
-        } else {
-            $(".extramoney").hide();
-        };
+
         // playAudio();
         // pauseAudio();
     });

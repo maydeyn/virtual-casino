@@ -43,7 +43,7 @@ $(document).ready(function () {
   function signUpUser(email, password) {
     $.post("/api/signup", {
       email: email,
-      password: password,
+      password: password
       // zipcode: zipcode,
       // first_name: first_name,
       // last_name: last_name,
