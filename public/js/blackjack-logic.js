@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     $.get("/api/user_data").then(function (data) {
         console.log(data);
@@ -41,6 +42,33 @@ $(document).ready(function () {
                 players[i].hand.push(card);
                 players[i].score += card.weight;
             };
+
+$(document).ready(function(){
+
+var newGameButton = $('#newGameButton');
+var hitButton = $('#hitButton');
+var standButton = $('#standButton'); 
+var betAmount = 10;
+
+var deck = shuffle(createDecks(1000));
+deck = cardImgUrl(deck);
+var players = [];
+var house = new Gambler(0,0);
+players.push(house);
+var player = new Gambler(1, 1000);
+players.push(player);
+
+newGameButton.on("click", function(){   
+    players[0].hand = [];
+    players[1].hand = [];
+    players[0].score = 0;
+    players[1].score = 0;
+    for (var k = 0; k < 2; k++){
+        for (var i = 0; i < players.length; i++){
+            var card = deck.pop();
+            players[i].hand.push(card);
+            players[i].score += card.weight;
+
         };
         hitButton.prop('disabled', false);
         standButton.prop('disabled', false);
@@ -65,6 +93,7 @@ $(document).ready(function () {
 
     hitButton.on("click", function () {
         var hitCard = deck.pop();
+
         players[1].hand.push(hitCard);
         $("#p" + (players[1].hand.length)).attr('src', hitCard.img_url);
         players[1].score += hitCard.weight;
@@ -80,7 +109,65 @@ $(document).ready(function () {
             $("#d" + (players[0].hand.length)).attr('src', hitCard.img_url);
             players[0].score += hitCard.weight;
             $("#houseScore").text(players[0].score);
-            winCheck21();
+
+        players[0].hand.push(hitCard);
+        $("#d" + (players[0].hand.length)).attr('src', hitCard.img_url);
+        players[0].score += hitCard.weight;
+        $("#houseScore").text(players[0].score);
+        winCheck21(); 
+    }
+    if(players[1].score > players[0].score){
+        var hitCard = deck.pop();
+        players[0].hand.push(hitCard);
+        $("#d" + (players[0].hand.length)).attr('src', hitCard.img_url);
+        players[0].score += hitCard.weight;
+        $("#houseScore").text(players[0].score);
+        winCheck21(); 
+    }
+    if(players[1].score > players[0].score){
+        var hitCard = deck.pop();
+        players[0].hand.push(hitCard);
+        $("#d" + (players[0].hand.length)).attr('src', hitCard.img_url);
+        players[0].score += hitCard.weight;
+        $("#houseScore").text(players[0].score);
+        winCheck21(); 
+    }
+    winCheck();    
+})
+
+function Card(suit, value, weight){
+    this.name = suit.charAt(0) + value; 
+    this.suit = suit;
+    this.value = value;
+    this.weight = weight;
+    this.img_url = "";
+}
+
+function Gambler(id, gambleAmount){
+    this.id = id;
+    this.gambleAmount = gambleAmount;
+    this.score = 0;
+    this.hand = [];
+
+}
+
+function createDecks(amount){
+    //var suits = ["♠", "♦", "♣", "♥"];
+    var suits = ["spades", "diamonds", "clubs", "hearts"];
+    var values = ["A","2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+    var deck = [];
+    for (var i = 0; suits.length > i; i++){
+        for(var k = 0; values.length > k; k++){
+            var weight = parseInt(values[k]);
+            if (values[k] === "J" || values[k] === "Q" || values[k] === "K" ){
+                weight = 10;
+            };
+            if (values[k] === "A"){
+                weight = 11;
+            };
+            var card = new Card(suits[i], values[k], weight);
+            deck.push(card);
+
         }
         winCheck();
     })
