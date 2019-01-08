@@ -329,9 +329,35 @@ body {
   }
   .mainmenu {
     position: absolute;
-    top: 80%;
-    left: 45%;
+    bottom: 2%;
+    left: 3%;
     z-index: 9000;
+  }
+  .cards {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 5%;
+    left: 5%;
+  }
+
+  img {
+    width: 70%;
+    height: 40%;
+  }
+  .user {
+    position: absolute;
+    left: 350px;
+    top: -150px;
+    width: 30px;
+    color: gold;
+  }
+  .score {
+    position: relative;
+    font-size: 9px;
+    top: 70%;
+    left: 30%;
+    z-index: -5;
   }
 }
 
@@ -344,12 +370,38 @@ body {
     display: none;
   }
   .nes-btn {
-    font-size: 8px;
+    font-size: 10px;
   }
   .mainmenu {
     position: absolute;
-    top: 80%;
-    left: 45%;
+    bottom: 2%;
+    left: 3%;
     z-index: 9000;
+  }
+  .cards {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 5%;
+    left: 5%;
+  }
+
+  img {
+    width: 70%;
+    height: 40%;
+  }
+  .user {
+    position: absolute;
+    left: 350px;
+    top: -150px;
+    width: 30px;
+    color: gold;
+  }
+  .score {
+    position: relative;
+    font-size: 9px;
+    top: 70%;
+    left: 30%;
+    z-index: -5;
   }
 }
