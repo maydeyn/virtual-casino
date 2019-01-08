@@ -14,6 +14,7 @@
   <link rel="icon" href="./assets/images/icon.png" />
 </head>
 
+
 <body>
   <div id="mobile-responsive">
     <div id="player"></div>
@@ -83,14 +84,44 @@
   </div>
 
   <!-- MOBILE RESPONSIVE-->
-  <div id="mobile-responsive-warning">
-    <div class="message -left">
-      <div class="nes-balloon from-left">
-        <p>PLEASE ROTATE YOUR DEVICE!</p>
+
+<body>
+  <div id="mobile-responsive">
+    <div id="player"></div>
+    <div class="title"></div>
+    <a class="navbar-brand" href="/logout"> Logout </a>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <h2>Welcome <span class="member-name"></span></h2>
+        </div>
       </div>
-      <i class="nes-smartphone"></i>
     </div>
-  </div>
+
+    <div class="container" id="money-holder">
+      Your money $ <span id="counter"></span> <br />
+    </div>
+    <div class="extramoney">
+      <button class="hidden" id="100">$100</button>
+      <button class="hidden" id="50">$50</button>
+      <button class="hidden" id="150">$150</button>
+    </div>
+    <div class="container" id="display-slot">
+      <a href="/slot">
+        <button type="submit" class="btn btn-default" id="btn-slot-game">
+          SLOT GAME
+        </button>
+      </a>
+    </div>
+
+    <a href="/blackjack">
+      <button type="submit" class="btn btn-default" id="btn-slot-game">
+        blackjack
+      </button>
+    </a>
+  
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
@@ -101,5 +132,19 @@
   <script src="./js/members.js"></script>
   <script src="./js/signup.js"></script>
 </body>
+
+
+  <!-- </canvas> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+
+  <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
+  <script src="./js/home.js"></script>
+  <script src="./js/members.js"></script>
+  <script src="./js/signup.js"></script>
+</body>
+
 
 </html>

@@ -560,6 +560,14 @@ body {
     z-index: 9000;
     font-size: 9px;
   }
+  #counter1 {
+    position: absolute;
+    top: 20%;
+    left: 7%;
+    background: rgb(72, 83, 19);
+    z-index: 9000;
+    font-size: 9px;
+  }
   .extramoney {
     position: absolute;
     bottom: 5%;
