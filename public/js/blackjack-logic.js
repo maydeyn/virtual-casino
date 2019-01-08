@@ -12,7 +12,6 @@ var house = new Gambler(0,0);
 players.push(house);
 var player = new Gambler(1, 1000);
 players.push(player);
-console.log(players);
 
 newGameButton.on("click", function(){   
     players[0].hand = [];
