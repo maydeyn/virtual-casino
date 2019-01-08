@@ -66,7 +66,23 @@ standButton.on("click", function(){
         $("#houseScore").text(players[0].score);
         winCheck21(); 
     }
-    winCheck();
+    if(players[1].score > players[0].score){
+        var hitCard = deck.pop();
+        players[0].hand.push(hitCard);
+        $("#d" + (players[0].hand.length)).attr('src', hitCard.img_url);
+        players[0].score += hitCard.weight;
+        $("#houseScore").text(players[0].score);
+        winCheck21(); 
+    }
+    if(players[1].score > players[0].score){
+        var hitCard = deck.pop();
+        players[0].hand.push(hitCard);
+        $("#d" + (players[0].hand.length)).attr('src', hitCard.img_url);
+        players[0].score += hitCard.weight;
+        $("#houseScore").text(players[0].score);
+        winCheck21(); 
+    }
+    winCheck();    
 })
 
 function Card(suit, value, weight){
