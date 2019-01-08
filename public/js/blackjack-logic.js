@@ -182,13 +182,13 @@ function winCheck() {
         standButton.prop('disabled', true);
         players[1].gambleAmount -= betAmount;
         $("#money").text(players[1].gambleAmount);
-    }else if(players[1].score > players[0].score){
+    }else if(players[1].score > players[0].score && players[1].score <= 21){
         $("#winOrLose").text("YOU WIN!");
         hitButton.prop('disabled', true);
         standButton.prop('disabled', true);
         players[1].gambleAmount += betAmount;
         $("#money").text(players[1].gambleAmount);
-    }else if(players[0].score > players[1].score){
+    }else if(players[0].score > players[1].score && players[0].score <= 21){
         $("#winOrLose").text("YOU LOSE!");
         hitButton.prop('disabled', true);
         standButton.prop('disabled', true);
