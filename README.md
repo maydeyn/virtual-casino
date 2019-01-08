@@ -25,7 +25,7 @@ Dan Staggs
 * Slot Reel SFX: https://freesound.org/people/JoannaLuna/sounds/448842/
 * Log-in: https://www.codementor.io/mayowa.a/how-to-build-a-simple-session-based-authentication-system-with-nodejs-from-scratch-6vn67mcy3
 
-### Front-end Resources
+### Front-end
 * CSS framework: https://github.com/nostalgic-css/NES.css 
 * Parallax navigation: https://codepen.io/danbhala/pen/GJGQad 
 * Pixel font: https://www.dafont.com/llpixel.font 
