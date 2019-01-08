@@ -1,201 +1,118 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Blackjack</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="./stylesheets/blackjack.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
-      rel="stylesheet"
-    />
-    <link
-      href="https://unpkg.com/nes.css@0.0.2/css/nes.min.css"
-      rel="stylesheet"
-    />
-    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
-    <link rel="icon" href="./assets/images/icon.png" />
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
-    <script src="js\blackjack-logic.js"></script>
-  </head>
-  <body>
-    <div id="mobile-responsive">
-      <div id="player"></div>
-      <div class="parallax">
-        <div class="mainmenu">
-          <a href="./members.html">
-            <button class="nes-btn is-error">Main Menu</button>
-          </a>
-        </div>
-        <div class="parallax__layer parallax__layer--title">
-          <div class="background"></div>
-        </div>
-        <div class="parallax__layer parallax__layer--back">
-          <div class="background"></div>
-        </div>
-        <div class="parallax__layer parallax__layer--deep">
-          <div class="background"></div>
-        </div>
 
-        <div class="parallax__layer parallax__layer--base flicker-base">
-          <div class="background"></div>
-        </div>
-        <table align="center" class="cards">
-          <tr class="dealerRow">
-            <!-- <th><img src="cards/10C.jpg" alt="10Clubs" height="350" width="250"></th> -->
-            <th>
-              <img
-                id="d1"
-                src="..\public\assets\images\cards\back.png"
-                alt="notinplay"
-                height="175"
-                width="125"
-              />
-            </th>
-            <th>
-              <img
-                id="d2"
-                src="..\public\assets\images\cards\back.png"
-                alt="notinplay"
-                height="175"
-                width="125"
-              />
-            </th>
-            <th>
-              <img
-                id="d3"
-                src="..\public\assets\images\cards\back.png"
-                alt="notinplay"
-                height="175"
-                width="125"
-              />
-            </th>
-            <th>
-              <img
-                id="d4"
-                src="..\public\assets\images\cards\back.png"
-                alt="notinplay"
-                height="175"
-                width="125"
-              />
-            </th>
-            <th>
-              <img
-                id="d5"
-                src="..\public\assets\images\cards\back.png"
-                alt="notinplay"
-                height="175"
-                width="125"
-              />
-            </th>
-          </tr>
-          <tr class="playerRow">
-            <th>
-              <img
-                id="p1"
-                src="..\public\assets\images\cards\back.png"
-                alt="notinplay"
-                height="175"
-                width="125"
-              />
-            </th>
-            <th>
-              <img
-                id="p2"
-                src="..\public\assets\images\cards\back.png"
-                alt="notinplay"
-                height="175"
-                width="125"
-              />
-            </th>
-            <th>
-              <img
-                id="p3"
-                src="..\public\assets\images\cards\back.png"
-                alt="notinplay"
-                height="175"
-                width="125"
-              />
-            </th>
-            <th>
-              <img
-                id="p4"
-                src="..\public\assets\images\cards\back.png"
-                alt="notinplay"
-                height="175"
-                width="125"
-              />
-            </th>
-            <th>
-              <img
-                id="p5"
-                src="..\public\assets\images\cards\back.png"
-                alt="notinplay"
-                height="175"
-                width="125"
-              />
-            </th>
-          </tr>
-        </table>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Blackjack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./stylesheets/blackjack.css" />
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
+  <link href="https://unpkg.com/nes.css@0.0.2/css/nes.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+  <link rel="icon" href="./assets/images/icon.png" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="js\blackjack-logic.js"></script>
+</head>
 
-<div class="score">
-          <table align="center">
-            <tr>
-              <td>
-                <p class="nes-container is-rounded">
-                  Your score: <span id="yourScore">0</span> Money: $<span
-                    id="money"
-                    >0</span
-                  >
-                </p>
-            </div>
-                <div class="user">
-                <input
-                  type="button"
-                  class="nes-btn is-warning"
-                  id="hitButton"
-                  value="Hit"
-                />
-                <input
-                  type="button"
-                  class="nes-btn is-warning"
-                  id="standButton"
-                  value="Stand"
-                />
-                <input
-                  type="button"
-                  class="nes-btn is-success"
-                  id="newGameButton"
-                  value="New Game"
-                />
-            </div>
-                <!-- <input type="button" id="newGameButton" value="New Game" onclick="startHand()"> -->
-              </td>
-            </tr>
-            <tr>
-              <td><div id="winOrLose"></div></td>
-            </tr>
-          </table>
-
+<body>
+  <div id="mobile-responsive">
+    <a class="navbar-brand" href="/logout"> Logout </a>
+    <div id="player"></div>
+    <div class="parallax">
+      <div class="container" id="money-holder2">
+        Your money $ <span id="counter2"></span> <br />
       </div>
-    </div>
-    <div id="mobile-responsive-warning">
-      <div class="message -left">
-        <div class="nes-balloon from-left">
-          <p>PLEASE ROTATE YOUR DEVICE!</p>
-        </div>
-        <i class="nes-smartphone"></i>
+      <div class="mainmenu">
+        <a href="./members.html">
+          <button class="nes-btn is-error">Main Menu</button>
+        </a>
       </div>
+      <div class="parallax__layer parallax__layer--title">
+        <div class="background"></div>
+      </div>
+      <div class="parallax__layer parallax__layer--back">
+        <div class="background"></div>
+      </div>
+      <div class="parallax__layer parallax__layer--deep">
+        <div class="background"></div>
+      </div>
+
+      <div class="parallax__layer parallax__layer--base flicker-base">
+        <div class="background"></div>
+      </div>
+      <table align="center" class="cards">
+        <tr class="dealerRow">
+          <!-- <th><img src="cards/10C.jpg" alt="10Clubs" height="350" width="250"></th> -->
+          <th>
+            <img id="d1" src="..\public\assets\images\cards\back.png" alt="notinplay" height="175" width="125" />
+          </th>
+          <th>
+            <img id="d2" src="..\public\assets\images\cards\back.png" alt="notinplay" height="175" width="125" />
+          </th>
+          <th>
+            <img id="d3" src="..\public\assets\images\cards\back.png" alt="notinplay" height="175" width="125" />
+          </th>
+          <th>
+            <img id="d4" src="..\public\assets\images\cards\back.png" alt="notinplay" height="175" width="125" />
+          </th>
+          <th>
+            <img id="d5" src="..\public\assets\images\cards\back.png" alt="notinplay" height="175" width="125" />
+          </th>
+        </tr>
+        <tr class="playerRow">
+          <th>
+            <img id="p1" src="..\public\assets\images\cards\back.png" alt="notinplay" height="175" width="125" />
+          </th>
+          <th>
+            <img id="p2" src="..\public\assets\images\cards\back.png" alt="notinplay" height="175" width="125" />
+          </th>
+          <th>
+            <img id="p3" src="..\public\assets\images\cards\back.png" alt="notinplay" height="175" width="125" />
+          </th>
+          <th>
+            <img id="p4" src="..\public\assets\images\cards\back.png" alt="notinplay" height="175" width="125" />
+          </th>
+          <th>
+            <img id="p5" src="..\public\assets\images\cards\back.png" alt="notinplay" height="175" width="125" />
+          </th>
+        </tr>
+      </table>
+
+      <div class="score">
+        <table align="center">
+          <tr>
+            <td>
+              <p class="nes-container is-rounded">
+                Your score: <span id="yourScore">0</span> Money: $<span id="money">0</span>
+              </p>
+      </div>
+      <div class="user">
+        <input type="button" class="nes-btn is-warning" id="hitButton" value="Hit" />
+        <input type="button" class="nes-btn is-warning" id="standButton" value="Stand" />
+        <input type="button" class="nes-btn is-success" id="newGameButton" value="New Game" />
+      </div>
+      <!-- <input type="button" id="newGameButton" value="New Game" onclick="startHand()"> -->
+      </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="winOrLose"></div>
+        </td>
+      </tr>
+      </table>
+
     </div>
-  </body>
+  </div>
+  <div id="mobile-responsive-warning">
+    <div class="message -left">
+      <div class="nes-balloon from-left">
+        <p>PLEASE ROTATE YOUR DEVICE!</p>
+      </div>
+      <i class="nes-smartphone"></i>
+    </div>
+  </div>
+</body>
+
 </html>
