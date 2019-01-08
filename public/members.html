@@ -1,82 +1,92 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Virtual Casino Members Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./stylesheets/home.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/nes.css@0.0.2/css/nes.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <link rel="icon" href="./assets/images/icon.png" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Virtual Casino Members Page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./stylesheets/home.css" />
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
-  <link href="https://unpkg.com/nes.css@0.0.2/css/nes.min.css" rel="stylesheet" />
-  <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
-  <link rel="icon" href="./assets/images/icon.png" />
-</head>
+  <body>
+    <div id="mobile-responsive">
+      <div id="player"></div>
+      <div class="title"></div>
+      <a class="navbar-brand" href="/logout"> Logout </a>
 
-<body>
-  <div id="mobile-responsive">
-    <div id="player"></div>
-    <div class="title"></div>
-    <a class="navbar-brand" href="/logout">
-      Logout
-    </a>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <h2>Welcome <span class="member-name"></span></h2>
+          </div>
+        </div>
+      </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <h2>Welcome <span class="member-name"></span></h2>
+      <div class="container" id="money-holder">
+        Your money $ <span id="counter"></span> <br />
+      </div>
+      <div class="extramoney">
+        <button class="hidden" id="100">$100</button>
+        <button class="hidden" id="50">$50</button>
+        <button class="hidden" id="150">$150</button>
+      </div>
+      <div class="container" id="display-slot">
+        <a href="/slot">
+          <button type="submit" class="btn btn-default" id="btn-slot-game">
+            SLOT GAME
+          </button>
+        </a>
+      </div>
+
+      <!--parallax background-->
+      <div class="parallax__layer parallax__layer--title">
+        <div class="background"></div>
+      </div>
+      <div class="parallax__layer parallax__layer--deep">
+        <div class="background"></div>
+      </div>
+      <div class="parallax__layer parallax__layer--back flicker-back">
+        <div class="background"></div>
+      </div>
+      <div class="parallax__layer parallax__layer--door">
+        <div class="background"></div>
+        <div class="parallax__layer parallax__layer--base flicker-base">
+          <div class="background"></div>
         </div>
       </div>
     </div>
-
-    <div class=container id="money-holder">Your money $ <span id="counter"></span>
-      <br>
-    </div>
-    <div class="extramoney">
-      <button class="hidden" id="100">$100</button>
-      <button class="hidden" id="50">$50</button>
-      <button class="hidden" id="150">$150</button>
-    </div>
-    <div class="container" id="display-slot">
-      <a href="/slot"> <button type="submit" class="btn btn-default" id="btn-slot-game">SLOT GAME</button> </a>
-    </div>
-
-    <!--parallax background-->
-    <div class="parallax__layer parallax__layer--title">
-      <div class="background"></div>
-    </div>
-    <div class="parallax__layer parallax__layer--deep">
-      <div class="background"></div>
-    </div>
-    <div class="parallax__layer parallax__layer--back flicker-back">
-      <div class="background"></div>
-    </div>
-    <div class="parallax__layer parallax__layer--door">
-      <div class="background"></div>
-      <div class="parallax__layer parallax__layer--base flicker-base">
-        <div class="background"></div>
-
+    <div id="mobile-responsive-warning">
+      <div class="message -left">
+        <div class="nes-balloon from-left">
+          <p>PLEASE ROTATE YOUR DEVICE!</p>
+        </div>
+        <i class="nes-smartphone"></i>
       </div>
     </div>
-  </div>
-  <div id="mobile-responsive-warning">
-    <div class="message -left">
-      <div class="nes-balloon from-left">
-        <p>PLEASE ROTATE YOUR DEVICE!</p>
-      </div>
-      <i class="nes-smartphone"></i>
-    </div>
-  </div>
-  <!-- </canvas> -->
+    <!-- </canvas> -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
 
-  <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
-  <script src="./js/home.js"></script>
-  <script src="./js/members.js"></script>
-  <script src="./js/signup.js"></script>
-</body>
-
+    <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/members.js"></script>
+    <script src="./js/signup.js"></script>
+  </body>
 </html>

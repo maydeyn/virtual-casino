@@ -1,85 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Create Account - Virtual Casino</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./stylesheets/signup.css"
+    />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="./stylesheets/home.css" /> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/nes.css@0.0.2/css/nes.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <link rel="icon" href="./assets/images/icon.png" />
+  </head>
 
-<head>
-  <title>Virtual Casino Sign Up</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="./stylesheets/home.css" />
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
-  <link href="https://unpkg.com/nes.css@0.0.2/css/nes.min.css" rel="stylesheet" />
-  <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
-  <link rel="icon" href="./assets/images/icon.png" />
-</head>
-
-<body>
-  <!-- <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-      </div>
-    </div>
-  </nav> -->
-  <div id="mobile-responsive">
-    <div class="title"></div>
-
-    <div id="player"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <h2>Sign Up Form</h2>
-          <form class="signup">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="email-input" placeholder="Email">
+  <body>
+    <div id="mobile-responsive">
+      <div class="parallax">
+        <div id="player"></div>
+        <div class="createAccount">
+          <div class="nes-container is-rounded">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                <h2>Create Account</h2>
+                <br />
+                <form class="signup">
+                  <div class="nes-field is-inline">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input
+                      type="email"
+                      class="form-control nes-input"
+                      id="email-input"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <br />
+                  <div class="nes-field is-inline">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input
+                      type="password"
+                      class="form-control nes-input"
+                      id="password-input"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div
+                    style="display: none"
+                    id="alert"
+                    class="alert alert-danger"
+                    role="alert"
+                  >
+                    <span
+                      class="glyphicon glyphicon-exclamation-sign"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="sr-only">Error:</span>
+                    <span class="msg"></span>
+                  </div>
+                  <br />
+                  <div id="wrapper">
+                    <button type="submit" class="nes-btn is-success">
+                      Submit
+                    </button>
+                    <br />
+                    <div class="mainmenu">
+                      <a href="./members.html">
+                        <button class="nes-btn is-error">Main Menu</button>
+                      </a>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="password-input" placeholder="Password">
-            </div>
-            <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-              <span class="sr-only">Error:</span> <span class="msg"></span>
-            </div>
-            <button type="submit" class="btn btn-default">Sign Up</button>
-          </form>
+          </div>
+        </div>
+        <!--parallax background-->
+        <div class="parallax__layer parallax__layer--title">
+          <div class="background"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--deep">
+          <div class="background"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--back flicker-back">
+          <div class="background"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--base flicker-base">
+          <div class="background"></div>
         </div>
       </div>
     </div>
-    <!--parallax background-->
-    <div class="parallax__layer parallax__layer--title">
-      <div class="background"></div>
-    </div>
-    <div class="parallax__layer parallax__layer--deep">
-      <div class="background"></div>
-    </div>
-    <div class="parallax__layer parallax__layer--back flicker-back">
-      <div class="background"></div>
-    </div>
-    <div class="parallax__layer parallax__layer--door">
-      <div class="background"></div>
-      <div class="parallax__layer parallax__layer--base flicker-base">
-        <div class="background"></div>
-
+    <div id="mobile-responsive-warning">
+      <div class="message -left">
+        <div class="nes-balloon from-left">
+          <p>PLEASE ROTATE YOUR DEVICE!</p>
+        </div>
+        <i class="nes-smartphone"></i>
       </div>
     </div>
-  </div>
-  <div id="mobile-responsive-warning">
-    <div class="message -left">
-      <div class="nes-balloon from-left">
-        <p>PLEASE ROTATE YOUR DEVICE!</p>
-      </div>
-      <i class="nes-smartphone"></i>
-    </div>
-  </div>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
 
-  <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
-  <script type="text/javascript" src="./js/signup.js"></script>
-
-</body>
-
+    <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
+    <script type="text/javascript" src="./js/signup.js"></script>
+  </body>
 </html>
