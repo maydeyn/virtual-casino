@@ -15,56 +15,18 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-jQuery(document).ready(function(){
-    // This button will increment the value
-    $('[data-quantity="plus"]').click(function(e){
-        // Stop acting like a button
-        e.preventDefault();
-        // Get the field name
-        fieldName = $(this).attr('data-field');
-        // Get its current value
-        var currentVal = parseInt($('input[name='+fieldName+']').val());
-        // If is not undefined
-        if (!isNaN(currentVal)) {
-            // Increment
-            $('input[name='+fieldName+']').val(currentVal + 1);
-        } else {
-            // Otherwise put a 0 there
-            $('input[name='+fieldName+']').val(0);
-        }
-    });
-    // This button will decrement the value till 0
-    $('[data-quantity="minus"]').click(function(e) {
-        // Stop acting like a button
-        e.preventDefault();
-        // Get the field name
-        fieldName = $(this).attr('data-field');
-        // Get its current value
-        var currentVal = parseInt($('input[name='+fieldName+']').val());
-        // If it isn't undefined or its greater than 0
-        if (!isNaN(currentVal) && currentVal > 0) {
-            // Decrement one
-            $('input[name='+fieldName+']').val(currentVal - 1);
-        } else {
-            // Otherwise put a 0 there
-            $('input[name='+fieldName+']').val(0);
-        }
-    });
-});
-
-
-
-// ideal roulette logic
-// function to take wagers from the player and push the to a json. 
+// --------------- ideal roulette logic --------------------
+// function to take wagers from the player and push the to a localstorage json. 
 // include a sub-function to check that the player has the money to commit the bet
 
-// function to essentially say 'no more bets. the sequence of that umbrella function are as follows:
+// function to essentially say 'no more bets'. the sequence of that umbrella function are as follows:
 // • the player bank is debited
 // • the casino runs a random number for the croupier
 // • compare the croupier number against the wagers on the TableNumbers
 // • pay any winning wagers
 // • empty the json that holds the wagers
 
+// the alert function is a placeholder for passing the wager to localstorage
 $(document).ready(function(){
     $("input[type='submit']").click(function(){
         var radioValue = $("input[name='table-wager']:checked").val();
@@ -75,130 +37,12 @@ $(document).ready(function(){
 });
 
 
-
-
-
-
-// toggle function
-// $('.toggle').click(function(e) {
-//     e.preventDefault();
-
-//   var $this = $(this);
-
-//   if ($this.next().hasClass('show')) {
-//       $this.next().removeClass('show');
-//       $this.next().slideUp(350);
-//   } else {
-//       $this.parent().parent().find('li .inner').removeClass('show');
-//       $this.parent().parent().find('li .inner').slideUp(350);
-//       $this.next().toggleClass('show');
-//       $this.next().slideToggle(350);
-//   }
-// });
-
-
-
-
-
-
-
-// -------------- below this line is the original prototype --------------
-// ------------ the original prototype is no longer the ideal logic ------
-// ---------------- the ideal logic is above this interlude --------------
-
-// const targetNumber = "";
-// const activeBets = {};
-// const playerMoney = "";
-
-// // for testing purposes
-// var test1 = process.argv[2];
-// var test2 = process.argv[3];
-// var test3 = process.argv[4];
-
-// // welcomes player to this game and displays the graphics and options (inside & outside bets)
-
-// function main(){
-//     placeBets();
-//     roulette();
-//     compareSuccess();
-//     playAgain();
-// }
-
-// function placeBets(){
-//     if (process.argv[2] === "inside") {
-//         placeInsideBets();
-//     } else if (process.argv[2] === "outside") {
-//         placeOutsideBets();
-//     }
-//     console.log(process.argv[2])
-// }
-
-// // submenu to place inside bets
-// function placeInsideBets(){
-//     var 
-// };
-
-// // submenu to place outside bets
-// function placeOutsideBets(){};
-
-// // function to run a math.random and then send to results
-// function roulette(){};
-
-// // function to determine payout and losses
-// function compareSuccess(){};
-
-// // function to change the players bank balance
-// function payouts(){};
-
-// // function to start over
-// function playAgain(){};
-
-// main();
-
-
-
-
-
-// table of contents: first section is the table numbers and their traits. second section is bet characteristics [ctrl-f/command-f "#bet-definition-tbl"]. third section is victor conditions and if-else statements [ctrl-f/command-f "#win-condition-tbl"]
+// table of contents: 
+// first section is the table numbers and their traits. 
+// second section is bet characteristics [ctrl-f/command-f "#bet-definition-tbl"]. 
+// third section is victor conditions and if-else statements [ctrl-f/command-f "#win-condition-tbl"]
 
 // this constructor templates the table numbers
-
-function newBet(betOption){
-    if (betOption === "straight"){
-        
-    }else if(betOption === "split"){
-        
-    }else if(betOption === "street"){
-
-    }else if(betOption === "doublestreet"){
-
-    }else if(betOption === "corner"){
-
-    }else if(betOption === "column"){
-
-    }else if(betOption === "dozen"){
-
-    }else if(betOption === "evenodd"){
-
-    }else if(betOption === "redblack"){
-
-    }else if(betOption === "highlow"){
-
-    }else if(betOption === "basket"){
-
-    }
-    // split
-    // street
-    // doublestreet
-    // corner
-    // column
-    // dozen
-    // evenOrOdd
-    // redBlack
-    // highLow
-    // basket
-}
-
 function TableNumbers (value, red, even, zero){
     this.value = value;
     this.isRed = red;
@@ -207,7 +51,6 @@ function TableNumbers (value, red, even, zero){
 }
 
 // I use a boolean for zero to prevent bugs related to the player betting even/odd and accidentally winning or similar situations
-
 const num0 = new TableNumbers(0, false, false, true);
 const num1 = new TableNumbers(1, true, false, false);
 const num2 = new TableNumbers(2, false, true, false);
@@ -246,19 +89,6 @@ const num34 = new TableNumbers(34, true, true, false);
 const num35 = new TableNumbers(35, false, false, false);
 const num36 = new TableNumbers(36, true, true, false);
 const numDoubleAught = new TableNumbers(37, false, false, true)
-
-// testing for Constructor function
-// console logs to test the tablenumbers
-// var croup = num18;
-
-// console.log(croup.value);
-// if (croup.value >= 19) {
-//     console.log("top half");
-// } else {
-//     console.log("bottom half");   
-// }
-
-
 
 // the collections of victory conditions "#bet-char-tbl"
 
@@ -342,21 +172,10 @@ var corners = [
     [31, 32, 34, 35], [32, 33, 35, 36]
 ]
 
-
-// testing the ability to call characteristics from objects
-
-// console.log(splits.vertical.colB[5])
-// console.log(splits.horizontal.lowStreets[3])
-// console.log(corners[1]);
-
-
-
-
 // the collection of conditions that define a victory "#win-condition-tbl"
 
 // var croupier is the casino/the target number for a round. use the variables defined on table-numbers.js
 // wagers get pushed to an array of objects, where the object includes a class describing the style of wager (single, street, basket, etc), an integer value for the wager, and the attributes of the wager (the numbers/conditions that will apply)
-
 var croupier = "";
 
 // wagers is a collection of user bets pushed to a database for the duration of the round. 
@@ -366,204 +185,191 @@ var wagers = {}
 
 // the wager is red
 if (croupier.isRed == true && croupier.isZero == false) {
-    console.log("win 1:1");
-    // function to pay out winnings to player bank goes here
+    // function to pay out winnings to player bank goes here. win 1:1.
     } else {
-        console.log("lose");
+    // lose
     }
 
 // the wager is black
 if (croupier.isRed == false && croupier.isZero == false) {
-    console.log("win 1:1");
+    // win 1:1
 } else {
-    console.log("lose");
+    // lose
 }
 
 // the wager is evens
 if (croupier.isEven == true && croupier.isZero == false) {
-    console.log("win 1:1");
+    // win 1:1
 } else {
-    console.log("lose");
+    // lose
 }
 
 // the wager is odds
 if (croupier.isEven == false && croupier.isZero == false) {
-    console.log("win 1:1");
+    // win 1:1
 } else {
-    console.log("lose");
+    // lose
 }
 
 // wager is lower half
 if (croupier.value <= 18 && croupier.isZero == false){
-    console.log("win 1:1");
+    // win 1:1
 } else {
-    console.log("lose");
+    // lose
 }
 
 // wager top half
 if (croupier.value >= 19 && croupier.isZero == false){
-    console.log("win 1:1");
+    // win 1:1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager column A: if croupier.value matches any of the 12 values on the chart of numbers from combo-bets.js, then it needs to log a victory condition
 if (columns.columnA.indexOf(croupier.value) > -1 && croupier.isZero == false){
-    console.log("win 2:1");
+    // win 2:1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager column B: if croupier.value matches any of the 12 values on the chart of numbers from combo-bets.js, then it needs to log a victory condition
 if (columns.columnB.indexOf(croupier.value) > -1 && croupier.isZero == false){
-    console.log("win 2:1");
+    // win 2:1
 } else {
-    console.log("lose");
+    // lose
 }; 
 
 // wager column C: if croupier.value matches any of the 12 values on the chart of numbers from combo-bets.js, then it needs to log a victory condition
 if (columns.columnC.indexOf(croupier.value) > -1 && croupier.isZero == false){
-    console.log("win 2:1");
+    // win 2:1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager first dozen
 if (dozens.firstDoz.indexOf(croupier.value) > -1 && croupier.isZero == false){
-    console.log("win 2:1");
+    // win 2:1
 } else {
-    console.log("lose");
+    // win lose
 } 
 
 // wager second dozen
 if (dozens.middleDoz.indexOf(croupier.value) > -1 && croupier.isZero == false){
-    console.log("win 2:1");
+    // win 2:1;
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager third dozen
 if (dozens.topDoz.indexOf(croupier.value) > -1 && croupier.isZero == false){
-    console.log("win 2:1");
+    // win 2;1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager on streetA
 if (streets.streetA.indexOf(croupier.value) > -1){
-    console.log("win 11:1");
+    // win 11:1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager on streetB
 if (streets.streetB.indexOf(croupier.value) > -1){
-    console.log("win 11:1");
+    // win 11:1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager on streetC
 if (streets.streetC.indexOf(croupier.value) > -1){
-    console.log("win 11:1");
+    // win 11:1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager on streetD
 if (streets.streetD.indexOf(croupier.value) > -1){
-    console.log("win 11:1");
+    // win 11:1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager on streetE
 if (streets.streetE.indexOf(croupier.value) > -1){
-    console.log("win 11:1");
+    // win 11:1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager on streetF
 if (streets.streetF.indexOf(croupier.value) > -1){
-    console.log("win 11:1");
+    // win 11:1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager on streetG
 if (streets.streetG.indexOf(croupier.value) > -1){
-    console.log("win 11:1");
+    // win 11:1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager on streetH
 if (streets.streetH.indexOf(croupier.value) > -1){
-    console.log("win 11:1");
+    // win 11:1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager on streetI
 if (streets.streetI.indexOf(croupier.value) > -1){
-    console.log("win 11:1");
+    // win 11:1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager on streetJ
 if (streets.streetJ.indexOf(croupier.value) > -1){
-    console.log("win 11:1");
+    // win 11:1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager on streetK
 if (streets.streetK.indexOf(croupier.value) > -1){
-    console.log("win 11:1");
+    // win 11:1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager on streetL
 if (streets.streetL.indexOf(croupier.value) > -1){
-    console.log("win 11:1");
+    // win 11:1
 } else {
-    console.log("lose");
+    // lose
 } 
 
 // wager on double1
 if (doubleStreets.double1.indexOf(croupier.value) > -1){
     console.log("win 5:1");
 } else {
-    console.log("lose");
+    // lose
 } 
-
-
-
-// everything below this line is function tests
-
-// var targetNumber = {
-//     value: 5,
-//     isRed: true,
-//     isEven: false,
-//     isZero: false
-// }
 
 // var croupier = targetNumber;
 
 // console.log(doubleStreets.double1);
 
 if (doubleStreets.double1.indexOf(croupier.value) > -1){
-    console.log("win 5:1");
-} else {
-    console.log("lose");
+    // win 5:1
+    } else {
+    // lose
 } 
 
 if (croupier.isRed == true && croupier.isZero == false) {
-    console.log("win 1:1");
-    // function to pay out winnings to player bank goes here
+    // win 1:1
     } else {
-        console.log("lose");
-    }
+        // lose
+}
