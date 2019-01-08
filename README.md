@@ -1,24 +1,31 @@
 # Virtual Casino
-Live Link: https://virtual-casino.herokuapp.com
+[Live link on Heroku](https://virtual-casino.herokuapp.com)
 
+![Virtual-casino](/image)
 
-## Members
-Front-end
-May Zhou
-Back-end
-Zhamal Nurdin kyzy
-Eskinder Tsege
-Dan Staggs
+## Contributors
+#### Front-end
+- [May Zhou](https://github.com/maydeyn)
+#### Back-end
+- [Zhamal Nurdin kyzy](https://github.com/zhakina90)
+- [Eskinder Tsege](https://github.com/tskindir)
+- [Dan Staggs](https://github.com/staggsdan)
 
 ## Games available
 * Slot Machine
 * Blackjack
 
-## Games in development
-* Roulettee
+## Mobile Responsive
 
 
-## Credits & Resources
+## Future development
+- [ ] Roulettee
+- [ ] Interactive elements & animations
+- [ ] Achivement system
+- [ ] Server-wide ranking system
+- [ ] Play online against other players
+
+## Resources & References
 ### Back-end
 * Slot Machine: https://codepen.io/Terramaster/pen/QyNJOM?editors=1101
 * Slot Game Music: http://freemusicarchive.org/search/?adv=1&quicksearch=+slot&search-genre=Genres&duration_from=&duration_to=
