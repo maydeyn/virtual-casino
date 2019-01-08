@@ -1,6 +1,5 @@
 # Virtual Casino
 [Live link on Heroku](https://virtual-casino.herokuapp.com)
-
 ![Virtual-casino](/public/assets/images/game.png)
 
 ## Contributors
@@ -14,9 +13,6 @@
 ## Games available
 * Slot Machine
 * Blackjack
-
-## Mobile Responsive
-
 
 ## Future development
 - [ ] Roulettee
