@@ -1,5 +1,12 @@
 $(document).ready(function () {
+    $.get("/api/user_data").then(function (data) {
+        console.log(data);
 
+        $(".member-name").text(data.email);
+        //  async: false;
+        // jQuery.ajaxSetup({ async: false });
+        $("#money-holder2").text("Your bank: $" + data.bank);
+    });
     var newGameButton = $('#newGameButton');
     var hitButton = $('#hitButton');
     var standButton = $('#standButton');
