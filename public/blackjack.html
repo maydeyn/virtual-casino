@@ -50,115 +50,116 @@
         <div class="parallax__layer parallax__layer--base flicker-base">
           <div class="background"></div>
         </div>
-        <div class="cards">
-          <table align="center">
-            <tr class="dealerRow">
-              <!-- <th><img src="cards/10C.jpg" alt="10Clubs" height="350" width="250"></th> -->
-              <th>
-                <img
-                  id="d1"
-                  src="..\public\assets\images\cards\back.png"
-                  alt="notinplay"
-                  height="175"
-                  width="125"
-                />
-              </th>
-              <th>
-                <img
-                  id="d2"
-                  src="..\public\assets\images\cards\back.png"
-                  alt="notinplay"
-                  height="175"
-                  width="125"
-                />
-              </th>
-              <th>
-                <img
-                  id="d3"
-                  src="..\public\assets\images\cards\back.png"
-                  alt="notinplay"
-                  height="175"
-                  width="125"
-                />
-              </th>
-              <th>
-                <img
-                  id="d4"
-                  src="..\public\assets\images\cards\back.png"
-                  alt="notinplay"
-                  height="175"
-                  width="125"
-                />
-              </th>
-              <th>
-                <img
-                  id="d5"
-                  src="..\public\assets\images\cards\back.png"
-                  alt="notinplay"
-                  height="175"
-                  width="125"
-                />
-              </th>
-            </tr>
-            <tr class="playerRow">
-              <th>
-                <img
-                  id="p1"
-                  src="..\public\assets\images\cards\back.png"
-                  alt="notinplay"
-                  height="175"
-                  width="125"
-                />
-              </th>
-              <th>
-                <img
-                  id="p2"
-                  src="..\public\assets\images\cards\back.png"
-                  alt="notinplay"
-                  height="175"
-                  width="125"
-                />
-              </th>
-              <th>
-                <img
-                  id="p3"
-                  src="..\public\assets\images\cards\back.png"
-                  alt="notinplay"
-                  height="175"
-                  width="125"
-                />
-              </th>
-              <th>
-                <img
-                  id="p4"
-                  src="..\public\assets\images\cards\back.png"
-                  alt="notinplay"
-                  height="175"
-                  width="125"
-                />
-              </th>
-              <th>
-                <img
-                  id="p5"
-                  src="..\public\assets\images\cards\back.png"
-                  alt="notinplay"
-                  height="175"
-                  width="125"
-                />
-              </th>
-            </tr>
-          </table>
-        </div>
-        <div class="user">
+        <table align="center" class="cards">
+          <tr class="dealerRow">
+            <!-- <th><img src="cards/10C.jpg" alt="10Clubs" height="350" width="250"></th> -->
+            <th>
+              <img
+                id="d1"
+                src="..\public\assets\images\cards\back.png"
+                alt="notinplay"
+                height="175"
+                width="125"
+              />
+            </th>
+            <th>
+              <img
+                id="d2"
+                src="..\public\assets\images\cards\back.png"
+                alt="notinplay"
+                height="175"
+                width="125"
+              />
+            </th>
+            <th>
+              <img
+                id="d3"
+                src="..\public\assets\images\cards\back.png"
+                alt="notinplay"
+                height="175"
+                width="125"
+              />
+            </th>
+            <th>
+              <img
+                id="d4"
+                src="..\public\assets\images\cards\back.png"
+                alt="notinplay"
+                height="175"
+                width="125"
+              />
+            </th>
+            <th>
+              <img
+                id="d5"
+                src="..\public\assets\images\cards\back.png"
+                alt="notinplay"
+                height="175"
+                width="125"
+              />
+            </th>
+          </tr>
+          <tr class="playerRow">
+            <th>
+              <img
+                id="p1"
+                src="..\public\assets\images\cards\back.png"
+                alt="notinplay"
+                height="175"
+                width="125"
+              />
+            </th>
+            <th>
+              <img
+                id="p2"
+                src="..\public\assets\images\cards\back.png"
+                alt="notinplay"
+                height="175"
+                width="125"
+              />
+            </th>
+            <th>
+              <img
+                id="p3"
+                src="..\public\assets\images\cards\back.png"
+                alt="notinplay"
+                height="175"
+                width="125"
+              />
+            </th>
+            <th>
+              <img
+                id="p4"
+                src="..\public\assets\images\cards\back.png"
+                alt="notinplay"
+                height="175"
+                width="125"
+              />
+            </th>
+            <th>
+              <img
+                id="p5"
+                src="..\public\assets\images\cards\back.png"
+                alt="notinplay"
+                height="175"
+                width="125"
+              />
+            </th>
+          </tr>
+        </table>
+
+<div class="score">
           <table align="center">
             <tr>
               <td>
-                <p class="nes-container is-rounded score">
+                <p class="nes-container is-rounded">
                   Your score: <span id="yourScore">0</span> Money: $<span
                     id="money"
                     >0</span
                   >
                 </p>
+            </div>
+                <div class="user">
                 <input
                   type="button"
                   class="nes-btn is-warning"
@@ -177,6 +178,7 @@
                   id="newGameButton"
                   value="New Game"
                 />
+            </div>
                 <!-- <input type="button" id="newGameButton" value="New Game" onclick="startHand()"> -->
               </td>
             </tr>
@@ -184,7 +186,7 @@
               <td><div id="winOrLose"></div></td>
             </tr>
           </table>
-        </div>
+
       </div>
     </div>
     <div id="mobile-responsive-warning">
