@@ -1,24 +1,24 @@
-body {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#0e422b),
-    to(#063f26)
-  );
-  background: gradient(#0e422b 0%, #063f26 100%);
-}
-
 body,
 html {
   height: 100%;
 }
 
+/********* USER DATA DISPLAY ********/
 #money-holder {
-  width: 100px;
-  height: 80px;
-  background: white;
+  position: absolute;
+  top: 35%;
+  left: 6%;
+  background: rgb(221, 255, 68);
+  z-index: 9000;
 }
+.extramoney {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  z-index: 9000;
+}
+
+/********** SLOTS STYLING & ANIMATION **********/
 .slots {
   position: absolute;
   top: 0;
@@ -31,12 +31,8 @@ html {
   z-index: 1;
 }
 .item {
-  width: 400px;
-  height: 400px;
-
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-
   transform-origin: 50px 50px -122px;
   -webkit-transform-origin: 50px 50px -122px;
   position: relative;
@@ -57,8 +53,6 @@ html {
 
   transition: -webkit-transform 1s;
 
-  /* -webkit-transition: -webkit-transform 1s; */
-
   -webkit-transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
@@ -69,11 +63,7 @@ html {
 .item.state2 {
   transform: rotateX(45deg);
   -webkit-transform: rotateX(45deg);
-
   transition: -webkit-transform 1s;
-
-  /* -webkit-transition: -webkit-transform 1s; */
-
   -webkit-transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
@@ -161,7 +151,7 @@ html {
   background-position: center center;
   background-repeat: no-repeat;
 
-  background-color: rgb(84, 230, 40);
+  background-color: #bdff71;
   -webkit-box-shadow: inset 0px 1px 5px rgb(170, 5, 5),
     inset 0px -1px 5px rgb(97, 7, 7);
   box-shadow: inset 0px 1px 5px rgb(170, 5, 5), inset 0px -1px 5px rgb(97, 7, 7);
@@ -215,7 +205,7 @@ html {
   background-image: url(../assets/images/slots/7.png);
 }
 .item div:nth-child(9) {
-  background: gold;
+  background: rgb(255, 231, 92);
   top: -72px;
   height: 242px;
   -webkit-transform: rotateY(0deg) translate3d(0px, 0px, -122px);
@@ -248,83 +238,41 @@ html {
     transform: rotateX(4320deg);
   }
 }
-.btn_container {
-  position: relative;
-  top: 80px;
-  left: 80px;
-  z-index: 5;
-}
-.nes-btn {
-  font-size: 25px;
-}
-.spin_btn.active {
-  -webkit-transform: translate3d(0px, 0px, 5px);
-  transform: translate3d(0px, 0px, 5px);
-}
-.spin_btn.active .side:nth-child(5) {
-  background-color: gold;
-  -webkit-transform: translate3d(0px, 0px, -1px);
-  transform: translate3d(0px, 0px, -1px);
-}
-.spin_btn .side {
+
+/****** BUTTONS STYLING ******/
+
+.sounds {
   position: absolute;
-  width: 100%;
-  height: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform-origin: center;
-  transform-origin: center;
+  top: 6%;
+  left: 6%;
+  z-index: 9000;
 }
-.spin_btn .side:first-child {
-  top: 0px;
-  left: 0px;
-  -webkit-transform: rotateX(90deg) translate3d(0px, -10px, 10px);
-  transform: rotateX(90deg) translate3d(0px, -10px, 10px);
+
+.spin {
+  position: absolute;
+  top: 25%;
+  left: 47%;
+  z-index: 9000;
 }
-.spin_btn .side:nth-child(2) {
-  bottom: 0px;
-  left: 0px;
-  -webkit-transform: rotateX(90deg) translate3d(0px, -10px, -10px);
-  transform: rotateX(90deg) translate3d(0px, -10px, -10px);
+.container {
+  width: 20%;
 }
-.spin_btn .side:nth-child(3) {
-  width: 20px;
-  height: 100%;
-  bottom: 0px;
-  left: 0;
-  -webkit-transform: rotateY(90deg) translate3d(10px, 0px, -10px);
-  transform: rotateY(90deg) translate3d(10px, 0px, -10px);
+
+.mainmenu {
+  position: absolute;
+  top: 80%;
+  left: 44%;
+  z-index: 9000;
 }
-.spin_btn .side:nth-child(4) {
-  width: 20px;
-  height: 100%;
-  bottom: 0px;
-  right: 0px;
-  -webkit-transform: rotateY(90deg) translate3d(10px, 0px, 10px);
-  transform: rotateY(90deg) translate3d(10px, 0px, 10px);
-}
-.spin_btn .side:nth-child(5) {
-  width: 100%;
-  height: 100%;
-  line-height: 80px;
-  top: 0px;
-  left: 0px;
-  -webkit-transform: translate3d(0px, 0, -20px);
-  transform: translate3d(0px, 0, -20px);
-  background-color: rgba(0, 255, 0, 0.7);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
+
+/******* DISPLAY IF USER HIT JACKPOT *******/
 .salute {
   display: none;
-  background-image: url(../assets/images/slots/cherry.png);
-  background-repeat: no-repeat;
+  background-image: url(../assets/images/slots/money.gif);
+  background-repeat: repeat-x;
   background-size: contain;
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 300px;
   position: absolute;
   top: 0;
   left: 0;
@@ -334,13 +282,413 @@ html {
   display: block;
 }
 .salute.two {
-  background-image: url(../assets/images/slots/apple.png);
+  background-image: url(../assets/images/slots/money.gif);
   left: auto;
   right: 0;
+  width: 300px;
+  height: 300px;
 }
 .salute.three {
-  background-image: url(../assets/images/slots/dragonfruit.png);
+  background-image: url(../assets/images/slots/money.gif);
   top: auto;
   left: 0;
   bottom: 0;
+  width: 300px;
+  height: 300px;
+}
+
+/******* BACKGROUND LAYERS *******/
+.parallax {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax__layer--deep {
+  -webkit-transform: translateZ(-2px) scale(3);
+  transform: translateZ(-2px) scale(3);
+}
+
+.parallax__layer {
+  pointer-events: none;
+}
+
+/********** BACKGROUND LAYERS **********/
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f89a2e), to(#f1d11f));
+  background: linear-gradient(#f89a2e 0%, #f1d11f 100%);
+}
+.background {
+  position: absolute;
+  display: block;
+}
+
+.parallax__layer--title {
+  padding: 0 100vw;
+}
+.parallax__layer--title .background {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat-x;
+  background-position: top left;
+  background-size: 100vh;
+  background-image: url(../assets/images/slots/title.gif);
+  z-index: -100;
+}
+
+.parallax__layer--deep {
+  padding: 0 100vw;
+}
+.parallax__layer--deep .background {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-image: url(../assets/images/slots/coins.gif);
+  z-index: 51;
+}
+.parallax__layer--back {
+  padding: 0 100vw;
+}
+.parallax__layer--back .background {
+  top: 0;
+  right: 0;
+  bottom: 17%;
+  left: 0;
+  background-repeat: repeat-x;
+  background-position: bottom left;
+  background-size: 20vh;
+  background-image: url(../assets/images/slotmachine.png);
+  z-index: 50;
+  opacity: 0.8;
+}
+
+.parallax__layer--base {
+  padding: 0 100vw;
+}
+.parallax__layer--base .background {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: 200vh;
+  background-image: url(../assets/images/red.png);
+  opacity: 0.3;
+  z-index: -1000;
+}
+
+/********** LAYERS ANIMATIONS **********/
+@-webkit-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.flicker-base {
+  -webkit-animation: flickerAnimation 0.5s infinite;
+  animation: flickerAnimation 0.5s infinite;
+}
+
+.flicker-back {
+  -webkit-animation: flickerAnimation 0.5s infinite;
+  animation: flickerAnimation 0.5s infinite;
+}
+
+/********** CHARACTER **********/
+#player {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: url(../assets/images/character/player.gif) no-repeat;
+  width: 200px;
+  height: 200px;
+  z-index: 100;
+}
+
+/********** MOBBILE RESPONSIVE **********/
+#mobile-responsive {
+  height: 100%;
+}
+
+#mobile-responsive-warning {
+  display: none;
+}
+
+/* iPhone X, 6/7/8 plus, Pixel 2 XL PORTRAIT */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  #mobile-responsive {
+    display: none;
+  }
+  #mobile-responsive-warning {
+    display: block;
+    padding: 30px;
+  }
+  .nes-smartphone {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .nes-balloon {
+    width: auto;
+  }
+  #mobile-responsive-warning {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+  }
+}
+/* pixel 2, iphone 6/7/8 PORTRAIT */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  #mobile-responsive {
+    display: none;
+  }
+  #mobile-responsive-warning {
+    display: block;
+    padding: 30px;
+  }
+  .nes-smartphone {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .nes-balloon {
+    width: auto;
+  }
+  #mobile-responsive-warning {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+  }
+}
+/* iphone 5/5E, galaxy S5 PORTRAIT */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  #mobile-responsive {
+    display: none;
+  }
+  #mobile-responsive-warning {
+    display: block;
+    padding: 30px;
+  }
+  .nes-smartphone {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .nes-balloon {
+    width: auto;
+  }
+  #mobile-responsive-warning {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+  }
+}
+
+/* iPhone X, 6/7/8 plus, Pixel 2 XL LANDSCAPE */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  #mobile-responsive-warning {
+    display: none;
+  }
+  #player {
+    display: none;
+  }
+  .nes-btn {
+    font-size: 10px;
+  }
+  .sounds {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    z-index: 9000;
+    font-size: 10px;
+  }
+  #money-holder {
+    position: absolute;
+    top: 20%;
+    left: 7%;
+    background: rgb(221, 255, 68);
+    z-index: 9000;
+    font-size: 9px;
+  }
+  .extramoney {
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+    width: 250px;
+    z-index: 9000;
+    font-size: 10px;
+    text-align: center;
+  }
+  #player {
+    display: none;
+  }
+  .spin {
+    position: absolute;
+    bottom: 40%;
+    left: 87%;
+    z-index: 9000;
+  }
+  .slots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 250px;
+    height: 80px;
+    z-index: 1;
+  }
+}
+
+/* pixel 2, iphone 6/7/8 LANDSCAPE */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  #mobile-responsive-warning {
+    display: none;
+  }
+  #player {
+    display: none;
+  }
+  .nes-btn {
+    font-size: 10px;
+  }
+  .sounds {
+    position: absolute;
+    top: 1%;
+    left: 60%;
+    z-index: 9000;
+  }
+  #money-holder {
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    background: rgb(221, 255, 68);
+    z-index: 9000;
+    font-size: 12px;
+  }
+  .extramoney {
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+    width: 30px;
+    z-index: 9000;
+    font-size: 8px;
+    text-align: center;
+  }
+  #player {
+    display: none;
+  }
+  .spin {
+    position: absolute;
+    bottom: 18%;
+    left: 80%;
+    z-index: 9000;
+  }
+}
+
+/* iphone 5/5S, Galaxy S5 LANDSCAPE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  #mobile-responsive-warning {
+    display: none;
+  }
+  #player {
+    display: none;
+  }
+  .nes-btn {
+    font-size: 8px;
+  }
+  .sounds {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    z-index: 9000;
+    font-size: 10px;
+  }
+  #money-holder {
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    background: rgb(221, 255, 68);
+    z-index: 9000;
+    font-size: 10px;
+  }
+  .extramoney {
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+    width: 30px;
+    z-index: 9000;
+    font-size: 10px;
+    text-align: center;
+  }
+  #player {
+    display: none;
+  }
+  .spin {
+    position: absolute;
+    bottom: 40%;
+    left: 87%;
+    z-index: 9000;
+  }
+  .slots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 280px;
+    height: 80px;
+    z-index: 1;
+  }
 }
