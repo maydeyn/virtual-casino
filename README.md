@@ -1,13 +1,39 @@
-# virtual-casino
-https://www.codementor.io/mayowa.a/how-to-build-a-simple-session-based-authentication-system-with-nodejs-from-scratch-6vn67mcy3
+# [Virtual Casino](https://virtual-casino.herokuapp.com)
+![Virtual-casino](/public/assets/demo/main.gif)
 
+## Contributors
+#### Front-end
+- [May Zhou](https://github.com/maydeyn)
+#### Back-end
+- [Zhamal Nurdin kyzy](https://github.com/zhakina90)
+- [Eskinder Tsege](https://github.com/tskindir)
+- [Dan Staggs](https://github.com/staggsdan)
 
-##SLot Machine
-Borrowed logic from https://codepen.io/Terramaster/pen/QyNJOM?editors=1101
+## Games available
+### Slot Machine
+![blackjack](/public/assets/demo/slots.gif)
 
+### Blackjack
+![blackjack](/public/assets/demo/blackjack.gif)
 
-## slot Game Music
-http://freemusicarchive.org/search/?adv=1&quicksearch=+slot&search-genre=Genres&duration_from=&duration_to=
+## Future development
+- [ ] Roulettee
+- [ ] Interactive elements & animations
+- [ ] Achivement system
+- [ ] Server-wide ranking system
+- [ ] Play online against other players
 
-##slot reel sound
-https://freesound.org/people/JoannaLuna/sounds/448842/
+## Resources & References
+### Back-end
+* Slot Machine: https://codepen.io/Terramaster/pen/QyNJOM?editors=1101
+* Slot Game Music: http://freemusicarchive.org/search/?adv=1&quicksearch=+slot&search-genre=Genres&duration_from=&duration_to=
+* Slot Reel SFX: https://freesound.org/people/JoannaLuna/sounds/448842/
+* Log-in: https://www.codementor.io/mayowa.a/how-to-build-a-simple-session-based-authentication-system-with-nodejs-from-scratch-6vn67mcy3
+
+### Front-end
+* CSS framework: https://github.com/nostalgic-css/NES.css 
+* Parallax navigation: https://codepen.io/danbhala/pen/GJGQad 
+* Pixel font: https://www.dafont.com/llpixel.font 
+* Interactive Resume: https://github.com/huidge/Resume_Robby-Leonardi 
+* Platformer Assets: https://lionheart963.itch.io/free-platformer-assets
+* Slot Machine 8-bit Graphics by AlbertoV.deviantart.com on @DeviantArt
