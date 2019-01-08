@@ -4,14 +4,22 @@ html {
 }
 
 .cards {
-  position: relative;
-  top: 10%;
+  position: absolute;
+  top: 15%;
+  left: 30%;
 }
 
 .user {
-  position: relative;
-  top: 10%;
+  position: absolute;
+  top: 65%;
+  left: 39%;
   color: gold;
+}
+
+.score {
+  position: relative;
+  top: 60%;
+  padding-bottom: 20px;
 }
 
 .nes-container,
@@ -206,6 +214,11 @@ body {
     text-align: center;
     color: black;
   }
+  #winOrLose {
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+  }
 }
 /* pixel 2, iphone 6/7/8 PORTRAIT */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
@@ -269,6 +282,38 @@ body {
   .nes-btn {
     font-size: 10px;
   }
+  .mainmenu {
+    position: absolute;
+    bottom: 2%;
+    left: 3%;
+    z-index: 9000;
+  }
+  .cards {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 5%;
+    left: 5%;
+  }
+
+  img {
+    width: 70%;
+    height: 40%;
+  }
+  .user {
+    position: absolute;
+    left: 350px;
+    top: -150px;
+    width: 30px;
+    color: gold;
+  }
+  .score {
+    position: relative;
+    font-size: 9px;
+    top: 70%;
+    left: 30%;
+    z-index: -5;
+  }
 }
 
 /* pixel 2, iphone 6/7/8 LANDSCAPE */
@@ -282,6 +327,12 @@ body {
   .nes-btn {
     font-size: 10px;
   }
+  .mainmenu {
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    z-index: 9000;
+  }
 }
 
 /* iphone 5/5S, Galaxy S5 LANDSCAPE */
@@ -294,5 +345,11 @@ body {
   }
   .nes-btn {
     font-size: 8px;
+  }
+  .mainmenu {
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    z-index: 9000;
   }
 }
