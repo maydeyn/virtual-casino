@@ -1,6 +1,5 @@
-# Virtual Casino
-[Live link on Heroku](https://virtual-casino.herokuapp.com)
-![Virtual-casino](/public/assets/images/game.png)
+# [Virtual Casino](https://virtual-casino.herokuapp.com)
+![Virtual-casino](/public/assets/demo/main.gif)
 
 ## Contributors
 #### Front-end
@@ -11,8 +10,11 @@
 - [Dan Staggs](https://github.com/staggsdan)
 
 ## Games available
-* Slot Machine
-* Blackjack
+### Slot Machine
+![blackjack](/public/assets/demo/slots.gif)
+
+### Blackjack
+![blackjack](/public/assets/demo/blackjack.gif)
 
 ## Future development
 - [ ] Roulettee
