@@ -40,14 +40,16 @@ module.exports = function (app) {
   });
   app.put("/api/user_bank", function (req, res) {
     console.log(req.body);
-    var newTotal = parseInt(req.body.newTotal);
-    var userEmail = req.body.userEmail;
-    console.log(userEmail);
+
+    console.log('is this our user???', req.user)
+    var newTotal = parseInt(req.body.data);
+    // var userEmail = req.body.userEmail;
+    // console.log(userEmail);
     // console.log(req.body.bank);
 
     db.User.update(
       { bank: newTotal },
-      { where: { email: userEmail } }
+      { where: { email: req.user.email } }
 
     ).then(function (thingWeGotBack) {
       console.log('this is thing we got back from ', thingWeGotBack);
@@ -79,18 +81,21 @@ module.exports = function (app) {
     }
   });
 
-  // app.post('/updateBank', function (req, res) {
-
-  //   var newTotal = req.body.total
-  //   var userEmail = req.body.userEmail
-
-  //   db.User.update(
-  //     { bank: newTotal },
-  //     { returning: true, where: { email: userEmail } }
-  //   ).then(function (thingWeGotBack) {
-  //     console.log('this is thing we got back from ', thingWeGotBack);
-  //   })
-  // })
+  // app.get("/api/user_bank", function (req, res) {
+  //   if (!req.user) {
+  //     // The user is not logged in, send back an empty object
+  //     res.json({});
+  //   }
+  //   else {
+  //     // Otherwise send back the user's email and id
+  //     // Sending back a password, even a hashed password, isn't a good idea
+  //     res.json({
+  //       email: req.user.email,
+  //       bank: req.user.bank,
+  //       bank: req.user.bank
+  //     });
+  //   }
+  // });
 
 
 
