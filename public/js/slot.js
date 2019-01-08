@@ -40,6 +40,8 @@ $(document).ready(function () {
 
                     // counter += 10;
                     // counter = $("#counter").text(money);
+                    counter += 10;
+                    $("#counter1").text(counter);
                 } else {
                     // counter -= 10;
                     counter = $("#counter1").text();
