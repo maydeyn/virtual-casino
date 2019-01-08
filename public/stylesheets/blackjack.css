@@ -1,0 +1,298 @@
+body,
+html {
+  height: 100%;
+}
+
+.cards {
+  position: relative;
+  top: 10%;
+}
+
+.user {
+  position: relative;
+  top: 10%;
+  color: gold;
+}
+
+.nes-container,
+.is-rounded {
+  background-color: #176910;
+  color: white;
+}
+
+.mainmenu {
+  position: absolute;
+  top: 80%;
+  left: 45%;
+  z-index: 9000;
+}
+
+/******* TEXT STYLING *******/
+#winOrLose {
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+/******* BACKGROUND LAYERS *******/
+.parallax {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax__layer--deep {
+  -webkit-transform: translateZ(-2px) scale(3);
+  transform: translateZ(-2px) scale(3);
+}
+
+.parallax__layer {
+  pointer-events: none;
+}
+
+/********** BACKGROUND LAYERS **********/
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#074e00), to(#1f6e00));
+  background: linear-gradient(#074e00 0%, #1f6e00 100%);
+}
+.background {
+  position: absolute;
+  display: block;
+}
+
+.parallax__layer--title {
+  padding: 0 100vw;
+}
+.parallax__layer--title .background {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat;
+  background-position: top left;
+  background-size: 100vh;
+  background-image: url(../assets/images/blackjacktitle.gif);
+  z-index: -100;
+  opacity: 0.1;
+}
+
+.parallax__layer--deep {
+  padding: 0 100vw;
+}
+.parallax__layer--deep .background {
+  top: 0;
+  right: 0;
+  bottom: -10px;
+  left: 0;
+  background-size: 45vh;
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-image: url(../assets/images/coinpile.gif);
+  z-index: 51;
+}
+
+.parallax__layer--base {
+  padding: 0 100vw;
+}
+.parallax__layer--base .background {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: 200vh;
+  background-image: url(../assets/images/light.png);
+  opacity: 0.2;
+  z-index: -1000;
+}
+
+/********** LAYERS ANIMATIONS **********/
+@-webkit-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.flicker-base {
+  -webkit-animation: flickerAnimation 0.5s infinite;
+  animation: flickerAnimation 0.5s infinite;
+}
+
+.flicker-back {
+  -webkit-animation: flickerAnimation 0.5s infinite;
+  animation: flickerAnimation 0.5s infinite;
+}
+
+/********** CHARACTER **********/
+#player {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: url(../assets/images/character/player.gif) no-repeat;
+  width: 200px;
+  height: 200px;
+  z-index: 100;
+}
+
+/********** MOBBILE RESPONSIVE **********/
+#mobile-responsive {
+  height: 100%;
+}
+
+#mobile-responsive-warning {
+  display: none;
+}
+
+/* iPhone X, 6/7/8 plus, Pixel 2 XL PORTRAIT */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  #mobile-responsive {
+    display: none;
+  }
+  #mobile-responsive-warning {
+    display: block;
+    padding: 30px;
+  }
+  .nes-smartphone {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .nes-balloon {
+    width: auto;
+  }
+  #mobile-responsive-warning {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+  }
+}
+/* pixel 2, iphone 6/7/8 PORTRAIT */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  #mobile-responsive {
+    display: none;
+  }
+  #mobile-responsive-warning {
+    display: block;
+    padding: 30px;
+  }
+  .nes-smartphone {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .nes-balloon {
+    width: auto;
+  }
+  #mobile-responsive-warning {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+  }
+}
+/* iphone 5/5E, galaxy S5 PORTRAIT */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  #mobile-responsive {
+    display: none;
+  }
+  #mobile-responsive-warning {
+    display: block;
+    padding: 30px;
+  }
+  .nes-smartphone {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .nes-balloon {
+    width: auto;
+  }
+  #mobile-responsive-warning {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+  }
+}
+
+/* iPhone X, 6/7/8 plus, Pixel 2 XL LANDSCAPE */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  #mobile-responsive-warning {
+    display: none;
+  }
+  #player {
+    display: none;
+  }
+  .nes-btn {
+    font-size: 10px;
+  }
+}
+
+/* pixel 2, iphone 6/7/8 LANDSCAPE */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  #mobile-responsive-warning {
+    display: none;
+  }
+  #player {
+    display: none;
+  }
+  .nes-btn {
+    font-size: 10px;
+  }
+}
+
+/* iphone 5/5S, Galaxy S5 LANDSCAPE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  #mobile-responsive-warning {
+    display: none;
+  }
+  #player {
+    display: none;
+  }
+  .nes-btn {
+    font-size: 8px;
+  }
+}

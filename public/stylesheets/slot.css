@@ -239,7 +239,7 @@ html {
   }
 }
 
-/****** SOUND BUTTONS STYLING ******/
+/****** BUTTONS STYLING ******/
 
 .sounds {
   position: absolute;
@@ -250,12 +250,19 @@ html {
 
 .spin {
   position: absolute;
-  bottom: 50%;
-  left: 70%;
+  top: 25%;
+  left: 47%;
   z-index: 9000;
 }
 .container {
   width: 20%;
+}
+
+.mainmenu {
+  position: absolute;
+  top: 80%;
+  left: 44%;
+  z-index: 9000;
 }
 
 /******* DISPLAY IF USER HIT JACKPOT *******/
