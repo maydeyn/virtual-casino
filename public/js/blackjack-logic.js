@@ -19,6 +19,7 @@ $(document).ready(function () {
     players.push(house);
     var player = new Gambler(1, 1000);
     players.push(player);
+    console.log(players);
 
     newGameButton.on("click", function () {
         players[0].hand = [];
@@ -64,22 +65,6 @@ $(document).ready(function () {
 
     standButton.on("click", function () {
         $("#d2").attr('src', players[0].hand[1].img_url);
-        if (players[1].score > players[0].score) {
-            var hitCard = deck.pop();
-            players[0].hand.push(hitCard);
-            $("#d" + (players[0].hand.length)).attr('src', hitCard.img_url);
-            players[0].score += hitCard.weight;
-            $("#houseScore").text(players[0].score);
-            winCheck21();
-        }
-        if (players[1].score > players[0].score) {
-            var hitCard = deck.pop();
-            players[0].hand.push(hitCard);
-            $("#d" + (players[0].hand.length)).attr('src', hitCard.img_url);
-            players[0].score += hitCard.weight;
-            $("#houseScore").text(players[0].score);
-            winCheck21();
-        }
         if (players[1].score > players[0].score) {
             var hitCard = deck.pop();
             players[0].hand.push(hitCard);
@@ -148,7 +133,7 @@ $(document).ready(function () {
                 cardName = cardName.charAt(0) + "1";
             }
 
-            deckArray[i].img_url = `/assets/images/cards/${cardName}.png`;
+            deckArray[i].img_url = `./assets/images/cards/${cardName}.png`;
         };
         return deckArray;
     }

@@ -22,6 +22,11 @@ html {
   padding-bottom: 20px;
 }
 
+#money-holder2 {
+  position: relative;
+  width: 200px;
+}
+
 .nes-container,
 .is-rounded {
   background-color: #176910;
