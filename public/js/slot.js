@@ -8,7 +8,7 @@ $(document).ready(function () {
     var salute = $(".salute");
     var sound = $("#sound");
     var reelsound = $("reelsound");
-    jQuery.ajaxSetup({ async: false });
+    // jQuery.ajaxSetup({ async: false });
     $("#btn-spin").on("click", function () {
         if (!isAnimate) {
             isAnimate = true;
