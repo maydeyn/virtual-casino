@@ -1,11 +1,10 @@
-
 body,
 html {
   height: 100%;
 }
 
 /********* USER DATA DISPLAY ********/
-#money-holder {
+#money-holder1 {
   position: absolute;
   top: 35%;
   left: 6%;
@@ -336,7 +335,13 @@ html {
 
 /********** BACKGROUND LAYERS **********/
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f89a2e), to(#f1d11f));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f89a2e),
+    to(#f1d11f)
+  );
   background: linear-gradient(#f89a2e 0%, #f1d11f 100%);
 }
 .background {
@@ -700,5 +705,3 @@ body {
     z-index: 1;
   }
 }
-
-

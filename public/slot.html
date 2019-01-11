@@ -1,123 +1,134 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Slot Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/nes.css@1.0.0/css/nes.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./stylesheets/slot.css"
+    />
+    <link rel="icon" href="./assets/images/icon.png" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Slot Game</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
-  <link href="https://unpkg.com/nes.css@1.0.0/css/nes.min.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./stylesheets/slot.css" />
-  <link rel="icon" href="./assets/images/icon.png" />
-</head>
-
-<body>
-  <div id="mobile-responsive">
-    <a class="navbar-brand" href="/logout"> Logout </a>
-    <div class="sounds">
-      <button class="nes-btn is-success" id="play">Sound On
-        <audio id="sound">
-          <source id="playsound" src="./audio/Podington_Bear_-_Slotcar.mp3" type="audio/mpeg">
-        </audio>
-      </button>
-      <button class="nes-btn is-warning" id="pause">Sound Off</button>
-    </div>
-    <div id="player"></div>
-    <div class="mainmenu"><a href="/members">
-        <button class="nes-btn is-error">Main Menu</button>
-      </a>
-    </div>
-
-    <div class="parallax">
-      <button type="button" class="nes-btn is-success spin" id="btn-spin">
-        REEL
-      </button>
-
-      <div class="nes-container is-rounded container" id="money-holder1">
-        <span id="counter1"></span>
-
+  <body>
+    <div id="mobile-responsive">
+      <div class="sounds">
+        <a href="/logout"> <button class="nes-btn is-error">Logout</button> </a>
+        <button class="nes-btn is-success" id="play">
+          Sound On
+          <audio id="sound">
+            <source
+              id="playsound"
+              src="./audio/Podington_Bear_-_Slotcar.mp3"
+              type="audio/mpeg"
+            />
+          </audio>
+        </button>
+        <button class="nes-btn is-warning" id="pause">Sound Off</button>
+      </div>
+      <div id="player"></div>
+      <div class="mainmenu">
+        <a href="/members">
+          <button class="nes-btn is-warning">Main Menu</button>
+        </a>
       </div>
 
+      <div class="parallax">
+        <button type="button" class="nes-btn is-success spin" id="btn-spin">
+          REEL
+        </button>
 
-      <!-- <div class="nes-container is-rounded container" id="money-holder1">
+        <div class="nes-container is-rounded container" id="money-holder1">
+          Current Balance: $ <span id="counter1"></span>
+        </div>
+
+        <!-- <div class="nes-container is-rounded container" id="money-holder1">
       <span id="counter1"></span></div> -->
 
-      <div class="parallax__layer parallax__layer--title">
-        <div class="background"></div>
-      </div>
-      <div class="parallax__layer parallax__layer--back">
-        <div class="background"></div>
-      </div>
-      <div class="parallax__layer parallax__layer--deep">
-        <div class="background"></div>
+        <div class="parallax__layer parallax__layer--title">
+          <div class="background"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--deep">
+          <div class="background"></div>
+        </div>
+
+        <div class="parallax__layer parallax__layer--base flicker-base">
+          <div class="background"></div>
+        </div>
       </div>
 
-      <div class="parallax__layer parallax__layer--base flicker-base">
-        <div class="background"></div>
+      <div class="container-fluid">
+        <div class="slots">
+          <div class="item">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="item">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="item">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <!-- <div class=container id="money-holder1">Current Balance : $<span id="counter1"></span> -->
+      </div>
+      <div class="salute"></div>
+      <div class="salute two"></div>
+      <div class="salute three"></div>
+
+      <!-- MOBILE RESPONSIVE -->
+      <div id="mobile-responsive-warning">
+        <div class="message -left">
+          <div class="nes-balloon from-left">
+            <p>PLEASE ROTATE YOUR DEVICE!</p>
+          </div>
+          <i class="nes-smartphone"></i>
+        </div>
       </div>
     </div>
-
-    <div class="container-fluid">
-      <div class="slots">
-        <div class="item">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="item">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="item">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-
-
-      <!-- <div class=container id="money-holder1"> Your bank : $<span id="counter1"></span> -->
-      <br>
-    </div>
-    <div class="salute"></div>
-    <div class="salute two"></div>
-    <div class="salute three"></div>
-
-    <!-- MOBILE RESPONSIVE -->
-    <div id="mobile-responsive-warning">
-      <div class="message -left">
-        <div class="nes-balloon from-left">
-          <p>PLEASE ROTATE YOUR DEVICE!</p>
-        </div>
-        <i class="nes-smartphone"></i>
-      </div>
-    </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="./js/slot.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/slot.js"></script>
+  </body>
 </html>

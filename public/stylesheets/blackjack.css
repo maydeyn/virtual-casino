@@ -39,6 +39,12 @@ html {
   left: 45%;
   z-index: 9000;
 }
+.sounds {
+  position: absolute;
+  top: 6%;
+  left: 6%;
+  z-index: 9000;
+}
 
 /******* TEXT STYLING *******/
 #winOrLose {
@@ -85,7 +91,13 @@ html {
 
 /********** BACKGROUND LAYERS **********/
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#074e00), to(#1f6e00));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#074e00),
+    to(#1f6e00)
+  );
   background: linear-gradient(#074e00 0%, #1f6e00 100%);
 }
 .background {
